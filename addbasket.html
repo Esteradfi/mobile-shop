@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- шрифты -->
+    <link rel="preload" href="fonts/RobotoRegular.woff" as="fonts" />
+    <link rel="preload" href="fonts/RobotoRegular.woff2" as="fonts" />
+
+    <!-- стили -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="shadow"></div>
+    <div id="shadow-dark"></div>
+    <header class="add-basket__header">
+      <a href="/" class="detail-page__back"></a>
+      <div class="detail-page__block">
+        <div id="burger-window">
+          <div class="burger-window-header">
+            <p class="burger-window-p">Текст</p>
+            <span id="burger-close">ₓ</span>
+          </div>
+          <hr class="burger-window-hr">
+          <div class="burger-window__content">
+            <a href="#" class="burger-window__content-item">
+              <img src="img/link.svg" alt="Скопировать ссылку">
+              <div class="burger-window__content-name">
+                Скопировать ссылку
+              </div>
+            </a>
+            <a href="#" class="burger-window__content-item">
+              <img src="img/share-detail.svg" alt="Поделиться">
+              <div class="burger-window__content-name">
+                Поделиться
+              </div>
+            </a>
+            <a href="#" class="burger-window__content-item">
+              <img src="img/home-button.svg" alt="Домой">
+              <div class="burger-window__content-name">
+                Домой
+              </div>
+            </a>
+            <a href="#" class="burger-window__content-item">
+              <img src="img/basket-detail.svg" alt="В корзину">
+              <div class="burger-window__content-name">
+                В корзину
+              </div>
+            </a>
+            <a href="#" class="burger-window__content-item">
+              <img src="img/support.svg" alt=" Написать тех. поддержке">
+              <div class="burger-window__content-name">
+                Написать тех. поддержке
+              </div>
+            </a>
+            <a href="#" class="burger-window__content-item">
+              <img src="img/question-2.svg" alt="Оставить обращение">
+              <div class="burger-window__content-name">
+                Оставить обращение
+              </div>
+            </a>
+          </div> 
+        </div>
+        <button type="button" class="basket">
+          <div class="basket-counter" id="basket-counter">
+            <span id="counter"></span>
+          </div>
+        </button>
+        <button type="button" class="burger"></button>
+      </div>
+    </header>
+    <main>
+      <section class="add-basket">
+        <div class="container add-basket__row-1">
+          <a href="detail.html" class="add-basket__close"></a>
+          <div class="add-basket__img">
+            <img src="img/72x72.jpg" alt="Название товара" />
+          </div>
+          <div class="add-basket__info">
+            <div class="add-basket__price">
+              <span class="new">10 500 тг.</span>
+              <span class="old">10 500 тг.</span>
+            </div>
+            <span class="stock">В наличии: 2 000 шт.</span>
+            <span class="type">Выбранное: "М" "синий"</span>
+          </div>
+        </div>
+        <div class="container add-basket__row-2">
+          <div class="add-basket__row-2-header">
+            <div class="add-basket__size-title">Размеры</div>
+            <a href="/" class="add-basket__tab-link">
+              Просмотр дополнительной информации о размере
+            </a>
+          </div>  
+          <div class="add-basket__size-block">
+            <div class="add-basket__size-btn">
+              <input
+                id="size-m"
+                type="radio"
+                name="size"
+                value="75~90"
+                data-btn="size-m"
+              />
+              <label for="size-m">M 75~90</label>
+            </div>
+            <div class="add-basket__size-btn">
+              <input
+                id="size-l"
+                type="radio"
+                name="size"
+                value="91~110"
+                data-btn="size-l"
+              />
+              <label for="size-l">L 91~110</label>
+            </div>
+            <div class="add-basket__size-btn">
+              <input
+                id="size-xl"
+                type="radio"
+                name="size"
+                value="111~125"
+                data-btn="size-xl"
+              />
+              <label for="size-xl">XL 111~125</label>
+            </div>
+            <div class="add-basket__size-btn">
+              <input
+                id="size-xxl"
+                type="radio"
+                name="size"
+                value="126~140"
+                data-btn="size-xxl"
+              />
+              <label for="size-xxl">2XL 126~140</label>
+            </div>
+          </div>
+          <div class="add-basket__tab">
+            <div class="add-basket__tab-content" id="size-m">
+              <div class="add-basket__tab-title">Изменения Товаров</div>
+              <ul class="add-basket__tab-list">
+                <li class="add-basket__tab-item">
+                  Плечо:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Бюст:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Обхват талии:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина брюк:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина рукава:
+                  <span>35cm</span>
+                </li>
+              </ul>
+            </div>
+            <div class="add-basket__tab-content" id="size-l">
+              <div class="add-basket__tab-title">Изменения Товаров</div>
+              <ul class="add-basket__tab-list">
+                <li class="add-basket__tab-item">
+                  Плечо:
+                  <span>35cm</span>
+                </li>
+
+                <li class="add-basket__tab-item">
+                  Обхват талии:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Окружность бедра:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина Топа:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина брюк:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина рукава:
+                  <span>35cm</span>
+                </li>
+              </ul>
+            </div>
+            <div class="add-basket__tab-content" id="size-xl">
+              <div class="add-basket__tab-title">Изменения Товаров</div>
+              <ul class="add-basket__tab-list">
+                <li class="add-basket__tab-item">
+                  Плечо:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Бюст:
+                  <span>35cm</span>
+                </li>
+
+                <li class="add-basket__tab-item">
+                  Длина Топа:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина брюк:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина рукава:
+                  <span>35cm</span>
+                </li>
+              </ul>
+            </div>
+            <div class="add-basket__tab-content" id="size-xxl">
+              <div class="add-basket__tab-title">Изменения Товаров</div>
+              <ul class="add-basket__tab-list">
+                <li class="add-basket__tab-item">
+                  Обхват талии:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Окружность бедра:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина Топа:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина брюк:
+                  <span>35cm</span>
+                </li>
+                <li class="add-basket__tab-item">
+                  Длина рукава:
+                  <span>35cm</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container add-basket__row-3">
+          <div class="add-basket__color-title">Цвет (8)</div>
+          <div class="add-basket__custom-scroll">
+            <div class="add-basket__color-block">
+              <div id="add-basket__color-window">
+                <span id="add-basket__color-close">ₓ</span>
+                <img src="img/104х104.jpg" alt="Цвет" />
+              </div>
+              <div class="add-basket__color-col">
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-1"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-1">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-2"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-2">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>Розовый розовый Розовый розовый</span>
+                  </label>
+                </div>
+              </div>
+              <div class="add-basket__color-col">
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-3"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-3">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-4"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-4">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+              </div>
+              <div class="add-basket__color-col">
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-5"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-5">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-6"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-6">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+              </div>
+              <div class="add-basket__color-col">
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-5"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-5">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-6"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-6">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+              </div>
+              <div class="add-basket__color-col">
+                <div class="add-basket__color-btn">
+                  <img src="img/maximize.svg" class="add-basket__color-zoom">
+                  <input
+                    id="color-7"
+                    type="radio"
+                    name="color"
+                    value="розовый"
+                  />
+                  <label class="add-basket__color-lbl" for="color-7">
+                    <img src="img/104Х104.jpg" alt="Цвет" />
+                    <span>розовый</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container add-basket__row-4">
+          <div class="add-basket__count-block">
+            <div class="add-basket__count-title">Количество</div>
+            <div class="add-basket__count-el">
+              <button class="add-basket__count-btn minus">-</button>
+              <input type="text" class="add-basket__count-number" value="1" />
+              <button class="add-basket__count-btn plus">+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer-detail">
+      <div class="container footer__container footer-detail__container">
+        <button type="button" class="footer-detail__btn basket">
+          В корзину
+        </button>
+      </div>
+    </footer>
+    <!-- jquery -->
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <!-- слайдер -->
+    <script src="script/slick.min.js"></script>
+    <!-- скрипты -->
+    <script src="script/script.js"></script>
+  </body>
+</html>
