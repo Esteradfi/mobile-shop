@@ -1,54 +1,3 @@
-// Слайдер в detail
-const swiperDetail = new Swiper('.detail-page__slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  pagination: {
-    el: '.detail-page__dots',
-    type: 'fraction',
-  },
-});
-
-// Слайдер в попапе
-const swiperDetailWindow = new Swiper('.detail-page__slider-window', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  pagination: {
-    el: '.detail-page__slide-dots',
-    type: 'fraction',
-  },
-  nested: true,
-});
-
-// Слайдер дополнительных фото
-const swiperDetailAdd = new Swiper('.detail-page__add-slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  pagination: {
-    el: '.detail-page__dots-add',
-    type: 'fraction',
-  },
-  nested: true,
-});
-
-//Слайдер цветов в окне "В корзину"
-const swiperDetailColor = new Swiper('.add-basket__color-slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  pagination: {
-    el: '.detail-page__dots-color',
-    type: 'fraction',
-  },
-  nested: true,
-});
-
 $(document).ready(function () {
   // слайдер цветов в попапе
   /*$(".add-basket__color-slider").on(`init reInit`, function (event, slick) {
@@ -136,12 +85,12 @@ $(document).ready(function () {
   });
 
   // левое меню
-  $(".category__btn").click(function () {
-    $(".category__btn").removeClass("active");
+  $(".categories-page__sidebar-button").click(function () {
+    $(".categories-page__sidebar-button").removeClass("active");
     $(this).toggleClass("active");
 
-    $(".category__content").removeClass("active");
-    $(".category__content")
+    $(".categories-page__content-block").removeClass("active");
+    $(".categories-page__content-block")
       .filter('[id="' + $(this).data("btn") + '"]')
       .toggleClass("active");
   });
@@ -151,6 +100,7 @@ $(document).ready(function () {
   $("button.popup-basket").click(function (event) {
     event.preventDefault();
     $("#shadow").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
       $('#add-basket').addClass('add-basket-open');
         $("#add-basket")
             .css("display", "block")
@@ -159,6 +109,7 @@ $(document).ready(function () {
   });
 
   $("#add-basket__close, #shadow").click(function () {
+      $("body").css("overflow", "auto");
       $('#add-basket').removeClass('add-basket-open');
       $("#add-basket").animate({ opacity: 0 }, 198, function () {
           $(this).css("display", "none");
@@ -208,9 +159,10 @@ $(document).ready(function () {
   });
 
   //Всплывающее окно Доставка / Возврат
-  $("div.to-delivery-popup").click(function (event) {
+  $("a.to-delivery-popup").click(function (event) {
     event.preventDefault();
     $("#shadow").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
       $('#detail-page__params-window').addClass('add-params-open');
         $("#detail-page__params-window")
             .css("display", "block")
@@ -221,6 +173,7 @@ $(document).ready(function () {
   $("#detail-page__params-close, #shadow").click(function () {
     $('#detail-page__params-window').removeClass('add-params-open');
       $("#detail-page__params-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
           $(this).css("display", "none");
           $("#shadow").fadeOut(297);
       });
@@ -230,6 +183,7 @@ $(document).ready(function () {
   $("a.detail-page__info-link").click(function (event) {
     event.preventDefault();
     $("#shadow").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
       $('#detail-page__info-window').addClass('add-info-open');
         $("#detail-page__info-window")
             .css("display", "block")
@@ -238,6 +192,7 @@ $(document).ready(function () {
   });
 
   $("#detail-page__info-close, #shadow").click(function () {
+    $("body").css("overflow", "auto");
     $('#detail-page__info-window').removeClass('add-info-open');
       $("#detail-page__info-window").animate({ opacity: 0 }, 198, function () {
           $(this).css("display", "none");
@@ -249,6 +204,7 @@ $(document).ready(function () {
   $(".detail-page__info-img").click(function (event) {
     event.preventDefault();
     $("#shadow-dark-4").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
         $("#detail-page__info-img-window")
             .css("display", "block")
             .animate({ opacity: 1 }, 198);
@@ -257,6 +213,7 @@ $(document).ready(function () {
 
   $("#detail-page__info-img-close, #shadow-dark-4").click(function () {
       $("#detail-page__info-img-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
           $(this).css("display", "none");
           $("#shadow-dark-4").fadeOut(297);
       });
@@ -266,6 +223,7 @@ $(document).ready(function () {
   $("div.slide-item").click(function (event) {
     event.preventDefault();
     $("#shadow-dark-3").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
         $("#detail-page__slide-window")
             .css("display", "block")
             .animate({ opacity: 1 }, 198);
@@ -274,15 +232,18 @@ $(document).ready(function () {
 
   $("#detail-page__slide-close, #shadow-dark-3").click(function () {
       $("#detail-page__slide-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
           $(this).css("display", "none");
           $("#shadow-dark-3").fadeOut(297);
       });
   });
 
   //Увеличение картинок в отзывах
+
   $("div.recall-page__img").click(function (event) {
     event.preventDefault();
     $("#shadow-dark-5").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
         $("#recall-page__img-window")
             .css("display", "block")
             .animate({ opacity: 1 }, 198);
@@ -293,6 +254,7 @@ $(document).ready(function () {
 
   $("#recall-page__img-close, #shadow-dark-5").click(function () {
       $("#recall-page__img-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
           $(this).css("display", "none");
           $("#shadow-dark-5").fadeOut(297);
         $("div.container")
@@ -301,9 +263,10 @@ $(document).ready(function () {
   });
 
   //Всплывающее окно Больше информации
-  $("button.burger").click(function (event) {
+  $("#burger").click(function (event) {
     event.preventDefault();
     $("#shadow").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
       $('#burger-window').addClass('burger-open');
         $("#burger-window")
             .css("display", "block")
@@ -316,6 +279,7 @@ $(document).ready(function () {
   $("#burger-close, #shadow").click(function () {
     $('#burger-window').removeClass('burger-open');
       $("#burger-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
           $(this).css("display", "none");
           $("#shadow").fadeOut(297);
         $("div.container")

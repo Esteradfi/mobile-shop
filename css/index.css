@@ -1,0 +1,224 @@
+.page-wrapper {
+    margin-top: 20px;
+}
+
+/*Шапка*/
+
+.page-header {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.page-header__form {
+    position: relative;
+    width: 100%;
+}
+
+.page-header__form-button {
+    position: absolute;
+    left: 10px;
+    top: 30%;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header__form-input {
+    padding: 12px 10px 12px 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    background-color: #e7e7e7;
+    width: 100%;
+}
+
+@media screen and (max-width: 335px) {
+    .page-header__form-button {
+        width: 14px;
+        height: 14px;
+    }
+    .page-header__form-input {
+        font-size: 14px;
+    }
+}
+
+.page-header__form-input::-webkit-input-placeholder {
+    color: #b1b1b1;
+   } 
+.page-header__form-input::-moz-placeholder {
+    color: #b1b1b1;
+}
+.page-header__form-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.page-header__form-input:focus {
+    outline: auto #CC7240;
+}
+
+.page-header__button:last-child {
+    margin-right: 5px;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+.page-header__button img {
+    width: 37px;
+    height: 47px;
+}
+
+@media screen and (max-width: 335px) {
+    .page-header__button img {
+        width: 30px;
+        height: 40px;
+    }
+}
+
+/*Навигация*/
+
+.index-page__nav {
+    display: flex;
+}
+
+.index-page__nav-navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    align-items: center;
+    -webkit-mask-image: linear-gradient(to right, black 97%, transparent 99%);
+    mask-image: linear-gradient(to right, black 60%, transparent 80%);
+}
+
+.index-page__nav-navbar::-webkit-scrollbar {
+    display: none;
+}
+
+.index-page__navbar-item {
+    color: #2f2f2f;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.selected {
+    color: #CC7240 !important;
+}
+
+.index-page__nav-etc {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.index-page__nav-etc img {
+    width: 24px;
+}
+
+/*Категории*/
+
+.index-page__categories {
+    padding-bottom: 0 !important;
+}
+
+.index-page__categories-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-page__categories-item {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    color: #2f2f2f;
+    margin-bottom: 10px;
+}
+
+.index-page__categories-item:last-child .index-page__categories-img {
+    transform: rotate(90deg);
+}
+
+.index-page__categories-title {
+    text-align: center;
+    font-size: 13px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-page__categories-img {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    aspect-ratio: 19/20;
+}
+
+/*Товары*/
+.page-products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-products__col {
+    width: 49%;
+}
+
+.page-products__col-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.page-products__col-left .page-products__col-item:first-child .products-col__item-img {
+    aspect-ratio: 1;
+}
+
+.products-col__item-img {
+    width: 100%;
+    aspect-ratio: 3/5;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.products-col__item-info {
+    padding: 8px 8px 16px 8px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+.products-col__info-title {
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 335px) {
+    .products-col__item-info {
+        text-align: center;
+    }
+    .products-col__info-text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.products-col__price {
+    font-size: 18px;
+    margin-right: 5px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #cc7240;
+}
+
+.products-col__sold {
+    font-size: 10px;
+    line-height: 11px;
+    font-weight: 700;
+    color: #9f9f9f;
+}
