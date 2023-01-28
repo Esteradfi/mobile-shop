@@ -22,6 +22,10 @@
     font-size: 18px;
 }
 
+.subcategories-page__navbar-item.active {
+    color: #cc7240;
+}
+
 .subcategories-page__navbar-item:not(:last-child) {
     margin-right: 10px;
 }
@@ -81,4 +85,10 @@
         width: 7px;
         padding-top: 0;
     }
+}
+
+/*Товары*/
+.subcategories-page__products-wrapper.active {
+    display: flex;
+    justify-content: space-between;
 }

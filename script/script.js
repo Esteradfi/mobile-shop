@@ -84,15 +84,22 @@ $(document).ready(function () {
     item.val(parseInt(item.val()) + 1);
   });
 
-  // левое меню
-  $(".categories-page__sidebar-button").click(function () {
-    $(".categories-page__sidebar-button").removeClass("active");
+  // Переключение контента на subcategories и index страницах
+  $(".toggle-button").click(function () {
+    $(".toggle-button").removeClass("active");
     $(this).toggleClass("active");
 
-    $(".categories-page__content-block").removeClass("active");
-    $(".categories-page__content-block")
+    $(".toggle-content").removeClass("active");
+    $(".toggle-content")
       .filter('[id="' + $(this).data("btn") + '"]')
       .toggleClass("active");
+  });
+
+  //Выпадающее меню
+  $(".index-page__nav-etc").click(function() {
+    $('.index-page__nav-navbar').slideToggle(300);
+    $(".index-page__nav-etc").toggleClass('rotate');
+    $('.index-page__nav-hide').slideToggle(300);
   });
 
   // вызов модального окна добавления в корзину
