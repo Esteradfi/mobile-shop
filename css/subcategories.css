@@ -20,10 +20,12 @@
     color: #2f2f2f;
     white-space: nowrap;
     font-size: 18px;
+    background-color: transparent;
 }
 
 .subcategories-page__navbar-item.active {
     color: #cc7240;
+    background-color: transparent;
 }
 
 .subcategories-page__navbar-item:not(:last-child) {
