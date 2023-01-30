@@ -96,14 +96,54 @@ $(document).ready(function () {
   });
 
   //Выпадающее меню
-  $(".index-page__nav-etc").click(function() {
-    $('.index-page__nav-navbar').slideToggle(300);
-    $(".index-page__nav-etc").toggleClass('rotate');
-    $('.index-page__nav-hide').slideToggle(300);
+  $("#sort").click(function() {
+    $("#shadow-sort").fadeIn(function () {
+      $("body").css("overflow", "hidden");
+      $(".subcategories-page__panel-sort").addClass('rotate');
+      $('.subcategories-page__panel-hide').addClass('subcategories-page__hide-open');
+    });
+  });
+
+  $("#shadow-sort, .subcategories-page__nav, .page-header__form-input, .subcategories-page__header, .subcategories-page__hide-item")
+  .click(function () {
+    $("body").css("overflow", "auto");
+    $(".subcategories-page__panel-sort").removeClass('rotate');
+    $('.subcategories-page__panel-hide').removeClass('subcategories-page__hide-open');
+    $("#shadow-sort").fadeOut();
+  });
+
+  //Переключение вида колонки продуктов
+  $('.subcategories-page__panel-shake').click(function() {
+    $('.subcategories-page__panel-shake').toggleClass('rotate');
+    $('.page-products').toggleClass('container');
+    $('.subcategories-page__products-wrapper').toggleClass('subcategories-page__products-wrapper-toggle');
+    $('.page-products__col').toggleClass('page-products__col-toggle');
+    $('.page-products__col-item').toggleClass('page-products__col-item-toggle');
+    $('.products-col__item-img').toggleClass('products-col__item-img-toggle');
+    $('.products-col__item-info').toggleClass('products-col__item-info-toggle');
+    $('.products-col__info-text').toggleClass('products-col__info-text-toggle');
+  });
+
+  //Вызов модального окна фильтра
+  $("#filter").click(function (event) {
+    event.preventDefault();
+    $("#shadow-filter").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
+        $("#filter-window")
+            .css("display", "block")
+            .animate({ opacity: 1 }, 198);
+    });
+  });
+
+  $("#filter-close, #shadow-filter").click(function () {
+      $("#filter-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
+          $(this).css("display", "none");
+          $("#shadow-filter").fadeOut(297);
+      });
   });
 
   // вызов модального окна добавления в корзину
-
   $("button.popup-basket").click(function (event) {
     event.preventDefault();
     $("#shadow").fadeIn(297, function () {

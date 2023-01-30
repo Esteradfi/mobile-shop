@@ -12,8 +12,10 @@
 </head>
 <body>
     <div id="shadow"></div>
+    <div id="shadow-sort"></div>
+    <div id="shadow-filter"></div>
     <div class="page-wrapper">
-        <header class="page-header container">
+        <header class="page-header subcategories-page__header">
             <a href="./index.html" class="page-header__button">
                 <img src="./img/back-index.svg" alt="etc">
             </a>
@@ -28,52 +30,54 @@
             </button>
         </header>
         <div id="burger-window">
-            <div class="burger-window-header">
-              <p class="burger-window-p">Текст</p>
-              <span id="burger-close">ₓ</span>
-            </div>
-            <hr class="burger-window-hr">
-            <div class="burger-window__content">
-              <a href="#" class="burger-window__content-item">
-                <img src="img/link.svg" alt="Скопировать ссылку">
-                <div class="burger-window__content-name">
-                  Скопировать ссылку
+            <div class="burger-window__wrapper">
+                <div class="burger-window__content">
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/link.svg" alt="Скопировать ссылку">
+                    <div class="burger-window__content-name">
+                    Копировать ссылку
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/share-detail.svg" alt="Поделиться">
+                    <div class="burger-window__content-name">
+                    Поделиться
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/home-button.svg" alt="Домой">
+                    <div class="burger-window__content-name">
+                    Домой
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/basket-burger.svg" alt="В корзину">
+                    <div class="burger-window__content-name">
+                    В корзину
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/support.svg" alt=" Написать тех. поддержке">
+                    <div class="burger-window__content-name">
+                    Написать тех. поддержке
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/question-2.svg" alt="Оставить обращение">
+                    <div class="burger-window__content-name">
+                    Оставить обращение
+                    </div>
+                </a>
                 </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/share-detail.svg" alt="Поделиться">
-                <div class="burger-window__content-name">
-                  Поделиться
+                <div class="footer-detail footer-open">
+                    <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                    </div>
                 </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/home-button.svg" alt="Домой">
-                <div class="burger-window__content-name">
-                  Домой
-                </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/basket-detail.svg" alt="В корзину">
-                <div class="burger-window__content-name">
-                  В корзину
-                </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/support.svg" alt=" Написать тех. поддержке">
-                <div class="burger-window__content-name">
-                  Написать тех. поддержке
-                </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/question-2.svg" alt="Оставить обращение">
-                <div class="burger-window__content-name">
-                  Оставить обращение
-                </div>
-              </a>
-            </div> 
+            </div>    
         </div>
         <main>
-            <section class="subcategories-page__nav container">
+            <section class="subcategories-page__nav">
                 <nav class="subcategories-page__nav-navbar">
                     <button type="button" data-btn="category-1" class="subcategories-page__navbar-item toggle-button text-font-18">Пиджаки</button>
                     <button type="button" data-btn="category-2" class="subcategories-page__navbar-item toggle-button text-font-18">Брюки</button>
@@ -84,10 +88,10 @@
                     <button type="button" data-btn="category-7" class="subcategories-page__navbar-item toggle-button text-font-18">Футболки</button>
                 </nav>
             </section>
-            <section class="subcategories-page__control container section__container">
+            <section class="subcategories-page__control section__container">
                 <div class="subcategories-page__control-panel">
                     <div class="subcategories-page__panel-item">
-                        <ul class="subcategories-page__panel-content">
+                        <ul class="subcategories-page__panel-content" id="sort">
                             <li class="subcategories-page__panel-list text-font-16">Сортировка
                             </li>
                             <img src="./img/arrow-down.svg" alt="sort" class="subcategories-page__panel-sort">
@@ -98,14 +102,178 @@
                         <div class="subcategories-page__panel-content">
                             <img src="./img/geometric-shape.svg" alt="shake" class="subcategories-page__panel-shake">
                             <hr>
-                            <div class="subcategories-page__panel-filter text-font-16">
+                            <div class="subcategories-page__panel-filter text-font-16" id="filter">
                                 Фильтр
                                 <img src="./img/filter.svg" alt="filter" class="subcategories-page__panel-img">
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="subcategories-page__panel-hide">
+                    <div class="subcategories-page__hide-wrapper">
+                        <button type="button" class="subcategories-page__hide-item text-font-16">По новизне</button>
+                        <button type="button" class="subcategories-page__hide-item text-font-16">По возрастанию цены</button>
+                        <button type="button" class="subcategories-page__hide-item text-font-16">По убыванию цены</button>
+                    </div>    
+                </div>
             </section>
+            <div id="filter-window">
+                <div class="filter-window__wrapper">
+                    <p class="filter-window-p">Фильтр</p>
+                    <span id="filter-close">ₓ</span>
+                    <form class="filter-window__content">
+                        <div class="filter-window__content-colors">
+                            <p class="filter-window-p text-font-18">Цвет</p>
+                            <div class="filter-window__colors-block text-font-14">
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-white">
+                                    <label for="color-white" class="filter-window__colors-lbl">
+                                        <div>Белый</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-black">
+                                    <label for="color-black" class="filter-window__colors-lbl">
+                                        <div>Чёрный</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-gray">
+                                    <label for="color-gray" class="filter-window__colors-lbl">
+                                        <div>Серый</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-dark-gray">
+                                    <label for="color-dark-gray" class="filter-window__colors-lbl">
+                                        <div>Темно-серый</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-pink">
+                                    <label for="color-pink" class="filter-window__colors-lbl">
+                                        <div>Розовый</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-beige">
+                                    <label for="color-beige" class="filter-window__colors-lbl">
+                                        <div>Бежевый</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-blue">
+                                    <label for="color-blue" class="filter-window__colors-lbl">
+                                        <div>Синий</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-red">
+                                    <label for="color-red" class="filter-window__colors-lbl">
+                                        <div>Красный</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__colors-item">
+                                    <input type="radio" name="color" id="color-etc">
+                                    <label for="color-etc" class="filter-window__colors-lbl">
+                                        <div>Показать еще</div>
+                                    </label>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="filter-window__content-price">
+                            <p class="filter-window-p text-font-18">Диапазон цен (₸)</p>
+                            <div class="filter-window__price-block">
+                                <div class="filter-window__price-inputs">
+                                    <input type="text" placeholder="Минимальная цена">
+                                    <hr>
+                                    <input type="text" placeholder="Максимальная цена">
+                                </div>
+                                <div class="filter-window__price-radio">
+                                    <div class="filter-window__price-item">
+                                        <input type="radio" name="price" id="price-low">
+                                        <label for="price-low" class="filter-window__price-lbl">
+                                            <div class="text-font-16">
+                                                0-56 <br>
+                                                <small>30% товаров</small>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="filter-window__price-item">
+                                        <input type="radio" name="price" id="price-medium">
+                                        <label for="price-medium" class="filter-window__price-lbl">
+                                            <div class="text-font-16">
+                                                56-198 <br>
+                                                <small>60% товаров</small>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="filter-window__price-item">
+                                        <input type="radio" name="price" id="price-high">
+                                        <label for="price-high" class="filter-window__price-lbl">
+                                            <div class="text-font-16">
+                                                198-413 <br>
+                                                <small>9% товаров</small>
+                                            </div>
+                                        </label> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-window__content-size">
+                            <p class="filter-window-p text-font-18">Размер</p>
+                            <div class="filter-window__sizes-block text-font-14">
+                                <div class="filter-window__sizes-item">
+                                    <input type="radio" name="size" id="size-xs">
+                                    <label for="size-xs" class="filter-window__sizes-lbl">
+                                        <div>XS</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__sizes-item">
+                                    <input type="radio" name="size" id="size-s">
+                                    <label for="size-s" class="filter-window__sizes-lbl">
+                                        <div>S</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__sizes-item">
+                                    <input type="radio" name="size" id="size-m">
+                                    <label for="size-m" class="filter-window__sizes-lbl">
+                                        <div>M</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__sizes-item">
+                                    <input type="radio" name="size" id="size-l">
+                                    <label for="size-l" class="filter-window__sizes-lbl">
+                                        <div>L</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__sizes-item">
+                                    <input type="radio" name="size" id="size-xl">
+                                    <label for="size-xl" class="filter-window__sizes-lbl">
+                                        <div>XL</div>
+                                    </label>
+                                </div>
+                                <div class="filter-window__sizes-item">
+                                    <input type="radio" name="size" id="size-xxl">
+                                    <label for="size-xxl" class="filter-window__sizes-lbl">
+                                        <div>XXL</div>
+                                    </label>
+                                </div>  
+                            </div>
+                        </div>  
+                    </form>
+                    <div class="footer-detail footer-open">
+                        <div class="container footer__container footer-detail__container">
+                          <button type="button" class="filter-footer__button filter-footer__button-reset">
+                            Сбросить
+                          </button>
+                          <button type="button" class="filter-footer__button filter-footer__button-apply">
+                            Применить
+                          </button>
+                        </div>
+                    </div>   
+                </div>    
+            </div>
             <section class="page-products container">
                 <div id="category-1" class="subcategories-page__products-wrapper toggle-content">
                     <div class="page-products__col page-products__col-left">
@@ -256,7 +424,7 @@
                                     Футболка с надписью корейский стиль 2021
                                 </div>
                                 <div class="products-col__info-text">
-                                    <span class="products-col__price text-font-16">
+                                    <span class="products-col__price text-font-18">
                                         1 390 тг.
                                     </span>
                                     <span class="products-col__sold">
@@ -332,7 +500,7 @@
                             </div>
                         </a>
                         <a href="./detail.html" class="page-products__col-item">
-                            <img src="img/107.jpg" alt="product" class="products-col__item-img">
+                            <img src="img/108.jpg" alt="product" class="products-col__item-img">
                             <div class="products-col__item-info">
                                 <div class="products-col__info-title text-font-16">
                                     Футболка с надписью корейский стиль 2021

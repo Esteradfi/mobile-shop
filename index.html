@@ -16,7 +16,6 @@
         <header class="page-header container">
             <form action="" class="page-header__form">
                 <button class="page-header__form-button">
-
                 </button>
                 <input type="search" class="page-header__form-input" placeholder="Поиск">
             </form>
@@ -25,52 +24,54 @@
             </button>
         </header>
         <div id="burger-window">
-            <div class="burger-window-header">
-              <p class="burger-window-p">Текст</p>
-              <span id="burger-close">ₓ</span>
-            </div>
-            <hr class="burger-window-hr">
-            <div class="burger-window__content">
-              <a href="#" class="burger-window__content-item">
-                <img src="img/link.svg" alt="Скопировать ссылку">
-                <div class="burger-window__content-name">
-                  Скопировать ссылку
+            <div class="burger-window__wrapper">
+                <div class="burger-window__content">
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/link.svg" alt="Скопировать ссылку">
+                    <div class="burger-window__content-name">
+                    Копировать ссылку
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/share-detail.svg" alt="Поделиться">
+                    <div class="burger-window__content-name">
+                    Поделиться
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/home-button.svg" alt="Домой">
+                    <div class="burger-window__content-name">
+                    Домой
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/basket-burger.svg" alt="В корзину">
+                    <div class="burger-window__content-name">
+                    В корзину
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/support.svg" alt=" Написать тех. поддержке">
+                    <div class="burger-window__content-name">
+                    Написать тех. поддержке
+                    </div>
+                </a>
+                <a href="#" class="burger-window__content-item">
+                    <img src="img/question-2.svg" alt="Оставить обращение">
+                    <div class="burger-window__content-name">
+                    Оставить обращение
+                    </div>
+                </a>
                 </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/share-detail.svg" alt="Поделиться">
-                <div class="burger-window__content-name">
-                  Поделиться
+                <div class="footer-detail footer-open">
+                    <div class="container footer__container footer-detail__container">
+                    <button type="button" id="burger-close">Закрыть</button>
+                    </div>
                 </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/home-button.svg" alt="Домой">
-                <div class="burger-window__content-name">
-                  Домой
-                </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/basket-detail.svg" alt="В корзину">
-                <div class="burger-window__content-name">
-                  В корзину
-                </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/support.svg" alt=" Написать тех. поддержке">
-                <div class="burger-window__content-name">
-                  Написать тех. поддержке
-                </div>
-              </a>
-              <a href="#" class="burger-window__content-item">
-                <img src="img/question-2.svg" alt="Оставить обращение">
-                <div class="burger-window__content-name">
-                  Оставить обращение
-                </div>
-              </a>
-            </div> 
+            </div>    
         </div>
         <main>
-            <section class="index-page__nav container section__container">
+            <section class="index-page__nav container">
                 <div class="index-page__nav-wrapper">
                     <nav class="index-page__nav-navbar">
                         <a href="./subcategories.html" class="index-page__navbar-item text-font-18 selected">Женская одежда</a>
@@ -78,20 +79,12 @@
                         <a href="./subcategories.html" class="index-page__navbar-item text-font-18">Мужская одежда</a>
                         <a href="./subcategories.html" class="index-page__navbar-item text-font-18">Обувь</a>
                     </nav>
-                    <button class="index-page__nav-etc">
+                    <a href="./categories.html" class="index-page__nav-etc">
                         <img src="./img/menu-bar.svg" alt="navbar">
-                    </button>
+                    </a>
                 </div>    
-                <nav class="index-page__nav-hide">
-                    <div class="index-page__hide-wrapper">
-                        <a href="./subcategories.html" class="index-page__hide-item text-font-18 selected">Женская одежда</a>
-                        <a href="./subcategories.html" class="index-page__hide-item text-font-18">Аксессуары</a>
-                        <a href="./subcategories.html" class="index-page__hide-item text-font-18">Мужская одежда</a>
-                        <a href="./subcategories.html" class="index-page__hide-item text-font-18">Обувь</a>
-                    </div>    
-                </nav>
             </section>
-            <section class="index-page__categories container section__container">
+            <section class="index-page__categories">
                 <div class="index-page__categories-block">
                     <a href="categories.html" class="index-page__categories-item">
                         <img src="./img/рубашка1.jpg" alt="category" class="index-page__categories-img">
