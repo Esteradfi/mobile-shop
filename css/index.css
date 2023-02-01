@@ -3,23 +3,25 @@
 .page-header {
     background-color: #f2f2f2;
     position: relative;
+    padding: 0 8px;
     padding-top: 15px;
     display: flex;
+    justify-content: flex-end;
     padding-bottom: 5px;
     z-index: 36;
 }
 
 .page-header__form {
     position: relative;
-    width: 100%;
+    width: 85%;
 }
 
 .page-header__form-button {
     position: absolute;
-    left: 10px;
-    top: 20%;
-    width: 22px;
-    height: 22px;
+    left: 15px;
+    top: 24%;
+    width: 20px;
+    height: 20px;
     background-color: transparent;
     background-image: url(../img/search-index.svg);
     background-repeat: no-repeat;
@@ -27,7 +29,7 @@
 }
 
 .page-header__form-input {
-    padding: 10px 10px 10px 40px;
+    padding: 10px 10px 10px 45px;
     border-radius: 20px;
     border: none;
     font-size: 18px;
@@ -62,7 +64,7 @@
 
 .page-header__button:last-child {
     margin-right: 5px;
-    margin-left: 5px;
+    margin-left: 12px;
     background-color: transparent;
 }
 
@@ -81,7 +83,7 @@
 /*Навигация*/
 
 .index-page__nav {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .index-page__nav-wrapper {
@@ -123,10 +125,12 @@
     white-space: nowrap;
     margin-right: 10px;
     font-size: 18px;
+    background-color: transparent;
 }
 
-.selected {
-    color: #CC7240 !important;
+.index-page__navbar-item.active {
+    color: #cc7240;
+    background-color: transparent;
 }
 
 .index-page__nav-etc {
@@ -142,6 +146,7 @@
 /*Категории*/
 
 .index-page__categories {
+    margin-bottom: 10px;
     background-color: #fff;
     padding: 0  8px;
     padding-top: 8px;
@@ -184,7 +189,7 @@
 }
 
 /*Товары*/
-.page-products__wrapper {
+.page-products__wrapper.active {
     display: flex;
     justify-content: space-between;
 }

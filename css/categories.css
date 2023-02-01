@@ -4,6 +4,13 @@
     align-items: center;
     color: #2f2f2f;
     padding-bottom: 0;
+    height: 55px;
+}
+
+@media screen and (max-width: 335px) {
+    .categories-page__header {
+        height: 51px;
+    }
 }
 
 .categories-page__header-button {
@@ -24,6 +31,7 @@
     width: 100%;
     padding: 10px 5px;
     color: #2f2f2f;
+    background-color: transparent;
 }
 
 .categories-page__sidebar-button.active{
@@ -47,7 +55,7 @@
     padding: 10px;
     border-radius: 0;
     width: 100%;
-    min-height: 80vh;
+    min-height: 93vh;
 }
 
 .categories-page__content-title {

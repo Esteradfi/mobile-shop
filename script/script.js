@@ -101,21 +101,37 @@ $(document).ready(function () {
       $("body").css("overflow", "hidden");
       $(".subcategories-page__panel-sort").addClass('rotate');
       $('.subcategories-page__panel-hide').addClass('subcategories-page__hide-open');
+      $(".subcategories-page__control").css("border-radius", "0");
     });
   });
 
-  $("#shadow-sort, .subcategories-page__nav, .page-header__form-input, .subcategories-page__header, .subcategories-page__hide-item")
+  $("#shadow-sort, #filter, .subcategories-page__nav, .page-header__form-input, .subcategories-page__header, .subcategories-page__hide-item")
   .click(function () {
     $("body").css("overflow", "auto");
     $(".subcategories-page__panel-sort").removeClass('rotate');
     $('.subcategories-page__panel-hide').removeClass('subcategories-page__hide-open');
     $("#shadow-sort").fadeOut();
+    $(".subcategories-page__control").css("border-radius", "16px 16px 0 0");
+  });
+
+  //Смена вида сортировки
+  $('#sort-text-1').click(function() {
+    document.getElementById('sort-text').innerHTML = `Сортировка <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort">`;
+  });
+  $('#sort-text-2').click(function() {
+    document.getElementById('sort-text').innerHTML = `По новизне <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort">`;
+  });
+  $('#sort-text-3').click(function() {
+    document.getElementById('sort-text').innerHTML = `По возрастанию <span>цены <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort"></span>`;
+  });
+  $('#sort-text-4').click(function() {
+    document.getElementById('sort-text').innerHTML = `По убыванию <span>цены <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort"></span>`;
   });
 
   //Переключение вида колонки продуктов
   $('.subcategories-page__panel-shake').click(function() {
     $('.subcategories-page__panel-shake').toggleClass('rotate');
-    $('.page-products').toggleClass('container');
+    $('.page-products').toggleClass('container subcategories-container');
     $('.subcategories-page__products-wrapper').toggleClass('subcategories-page__products-wrapper-toggle');
     $('.page-products__col').toggleClass('page-products__col-toggle');
     $('.page-products__col-item').toggleClass('page-products__col-item-toggle');
@@ -135,12 +151,24 @@ $(document).ready(function () {
     });
   });
 
-  $("#filter-close, #shadow-filter").click(function () {
+  $("#filter-close, #shadow-filter, #filter-apply").click(function () {
       $("#filter-window").animate({ opacity: 0 }, 198, function () {
         $("body").css("overflow", "auto");
           $(this).css("display", "none");
           $("#shadow-filter").fadeOut(297);
       });
+  });
+
+  //Нажатие на кнопку Применить и на кнопку Сбросить
+  let filterIcon = document.querySelector('#filter-icon');
+  $("#filter-apply").click(function () {
+    $(".subcategories-page__panel-filter").addClass('active');
+    filterIcon.setAttribute('src', './img/filter-orange.svg');
+  });
+
+  $("#filter-reset").click(function () {
+    $(".subcategories-page__panel-filter").removeClass('active');
+    filterIcon.setAttribute('src', './img/filter.svg');
   });
 
   // вызов модального окна добавления в корзину

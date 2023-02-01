@@ -31,44 +31,46 @@
         </header>
         <div id="burger-window">
             <div class="burger-window__wrapper">
-                <div class="burger-window__content">
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/link.svg" alt="Скопировать ссылку">
-                    <div class="burger-window__content-name">
-                    Копировать ссылку
+                <div class="burger-window__content-wrapper">
+                    <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                        Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                        Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                        Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                        В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                        Написать тех. поддержке
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                        Оставить обращение
+                        </div>
+                    </a>
                     </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/share-detail.svg" alt="Поделиться">
-                    <div class="burger-window__content-name">
-                    Поделиться
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/home-button.svg" alt="Домой">
-                    <div class="burger-window__content-name">
-                    Домой
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/basket-burger.svg" alt="В корзину">
-                    <div class="burger-window__content-name">
-                    В корзину
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/support.svg" alt=" Написать тех. поддержке">
-                    <div class="burger-window__content-name">
-                    Написать тех. поддержке
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/question-2.svg" alt="Оставить обращение">
-                    <div class="burger-window__content-name">
-                    Оставить обращение
-                    </div>
-                </a>
-                </div>
+                </div>    
                 <div class="footer-detail footer-open">
                     <div class="container footer__container footer-detail__container">
                     <button type="button" id="burger-close">Закрыть</button>
@@ -79,41 +81,46 @@
         <main>
             <section class="subcategories-page__nav">
                 <nav class="subcategories-page__nav-navbar">
-                    <button type="button" data-btn="category-1" class="subcategories-page__navbar-item toggle-button text-font-18">Пиджаки</button>
+                    <button type="button" data-btn="category-1" class="subcategories-page__navbar-item toggle-button text-font-18 active">Пиджаки</button>
                     <button type="button" data-btn="category-2" class="subcategories-page__navbar-item toggle-button text-font-18">Брюки</button>
-                    <button type="button" data-btn="category-3" class="subcategories-page__navbar-item toggle-button text-font-18 active">Джинсы</button>
+                    <button type="button" data-btn="category-3" class="subcategories-page__navbar-item toggle-button text-font-18">Джинсы</button>
                     <button type="button" data-btn="category-4" class="subcategories-page__navbar-item toggle-button text-font-18">Лонгсливы</button>
                     <button type="button" data-btn="category-5" class="subcategories-page__navbar-item toggle-button text-font-18">Топы</button>
                     <button type="button" data-btn="category-6" class="subcategories-page__navbar-item toggle-button text-font-18">Свитшоты</button>
                     <button type="button" data-btn="category-7" class="subcategories-page__navbar-item toggle-button text-font-18">Футболки</button>
                 </nav>
             </section>
-            <section class="subcategories-page__control section__container">
+            <section class="subcategories-page__control">
                 <div class="subcategories-page__control-panel">
                     <div class="subcategories-page__panel-item">
                         <ul class="subcategories-page__panel-content" id="sort">
-                            <li class="subcategories-page__panel-list text-font-16">Сортировка
+                            <li class="subcategories-page__panel-list text-font-16" id="sort-text">Сортировка
+                                <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort">
                             </li>
-                            <img src="./img/arrow-down.svg" alt="sort" class="subcategories-page__panel-sort">
                         </ul>
                     </div>
                     <div class="subcategories-page__panel-item text-font-16">Продажи</div>
                     <div class="subcategories-page__panel-item">
                         <div class="subcategories-page__panel-content">
                             <img src="./img/geometric-shape.svg" alt="shake" class="subcategories-page__panel-shake">
-                            <hr>
+                            <div class="subcategories-page__panel-separator">|</div>
                             <div class="subcategories-page__panel-filter text-font-16" id="filter">
                                 Фильтр
-                                <img src="./img/filter.svg" alt="filter" class="subcategories-page__panel-img">
+                                <img src="./img/filter.svg" alt="filter" id="filter-icon" class="subcategories-page__panel-img">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="subcategories-page__panel-hide">
                     <div class="subcategories-page__hide-wrapper">
-                        <button type="button" class="subcategories-page__hide-item text-font-16">По новизне</button>
-                        <button type="button" class="subcategories-page__hide-item text-font-16">По возрастанию цены</button>
-                        <button type="button" class="subcategories-page__hide-item text-font-16">По убыванию цены</button>
+                        <li class="subcategories-page__hide-item text-font-16" id="sort-text-1">Сортировка
+                        </li>
+                        <li class="subcategories-page__hide-item text-font-16" id="sort-text-2">По новизне
+                        </li>
+                        <li class="subcategories-page__hide-item text-font-16" id="sort-text-3">По возрастанию цены
+                        </li>
+                        <li class="subcategories-page__hide-item text-font-16" id="sort-text-4">По убыванию цены
+                        </li>
                     </div>    
                 </div>
             </section>
@@ -122,7 +129,7 @@
                     <p class="filter-window-p">Фильтр</p>
                     <span id="filter-close">ₓ</span>
                     <form class="filter-window__content">
-                        <div class="filter-window__content-colors">
+                        <div class="filter-window__content-colors filter-margin__bottom">
                             <p class="filter-window-p text-font-18">Цвет</p>
                             <div class="filter-window__colors-block text-font-14">
                                 <div class="filter-window__colors-item">
@@ -181,7 +188,7 @@
                                 </div>    
                             </div>
                         </div>
-                        <div class="filter-window__content-price">
+                        <div class="filter-window__content-price filter-margin__bottom">
                             <p class="filter-window-p text-font-18">Диапазон цен (₸)</p>
                             <div class="filter-window__price-block">
                                 <div class="filter-window__price-inputs">
@@ -194,7 +201,7 @@
                                         <input type="radio" name="price" id="price-low">
                                         <label for="price-low" class="filter-window__price-lbl">
                                             <div class="text-font-16">
-                                                0-56 <br>
+                                                0-2990 <br>
                                                 <small>30% товаров</small>
                                             </div>
                                         </label>
@@ -203,7 +210,7 @@
                                         <input type="radio" name="price" id="price-medium">
                                         <label for="price-medium" class="filter-window__price-lbl">
                                             <div class="text-font-16">
-                                                56-198 <br>
+                                                3000-8990 <br>
                                                 <small>60% товаров</small>
                                             </div>
                                         </label>
@@ -212,7 +219,7 @@
                                         <input type="radio" name="price" id="price-high">
                                         <label for="price-high" class="filter-window__price-lbl">
                                             <div class="text-font-16">
-                                                198-413 <br>
+                                                9000-14990 <br>
                                                 <small>9% товаров</small>
                                             </div>
                                         </label> 
@@ -220,7 +227,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="filter-window__content-size">
+                        <div class="filter-window__content-size filter-margin__bottom">
                             <p class="filter-window-p text-font-18">Размер</p>
                             <div class="filter-window__sizes-block text-font-14">
                                 <div class="filter-window__sizes-item">
@@ -264,24 +271,24 @@
                     </form>
                     <div class="footer-detail footer-open">
                         <div class="container footer__container footer-detail__container">
-                          <button type="button" class="filter-footer__button filter-footer__button-reset">
+                          <button type="button" id="filter-reset" class="filter-footer__button filter-footer__button-reset">
                             Сбросить
                           </button>
-                          <button type="button" class="filter-footer__button filter-footer__button-apply">
+                          <button type="button" id="filter-apply" class="filter-footer__button filter-footer__button-apply">
                             Применить
                           </button>
                         </div>
                     </div>   
                 </div>    
             </div>
-            <section class="page-products container">
-                <div id="category-1" class="subcategories-page__products-wrapper toggle-content">
+            <section class="page-products subcategories-container container">
+                <div id="category-1" class="subcategories-page__products-wrapper toggle-content active">
                     <div class="page-products__col page-products__col-left">
                         <a href="./detail.html" class="page-products__col-item">
                             <img src="img/100.jpg" alt="product" class="products-col__item-img">
                             <div class="products-col__item-info">
                                 <div class="products-col__info-title text-font-16">
-                                    Футболка с надписью корейский стиль 2021
+                                    Футболка с надписью футбол корейский стиль 2021
                                 </div>
                                 <div class="products-col__info-text">
                                     <span class="products-col__price text-font-18">
@@ -383,7 +390,7 @@
                         </a>
                     </div>
                 </div>
-                <div id="category-3" class="subcategories-page__products-wrapper toggle-content active">
+                <div id="category-3" class="subcategories-page__products-wrapper toggle-content">
                     <div class="page-products__col page-products__col-left">
                         <a href="./detail.html" class="page-products__col-item">
                             <img src="img/100.jpg" alt="product" class="products-col__item-img">

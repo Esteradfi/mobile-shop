@@ -13,7 +13,7 @@
 <body>
     <div id="shadow"></div>
     <div class="page-wrapper">
-        <header class="page-header container">
+        <header class="page-header">
             <form action="" class="page-header__form">
                 <button class="page-header__form-button">
                 </button>
@@ -25,44 +25,46 @@
         </header>
         <div id="burger-window">
             <div class="burger-window__wrapper">
-                <div class="burger-window__content">
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/link.svg" alt="Скопировать ссылку">
-                    <div class="burger-window__content-name">
-                    Копировать ссылку
+                <div class="burger-window__content-wrapper">
+                    <div class="burger-window__content">
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/link.svg" alt="Скопировать ссылку">
+                        <div class="burger-window__content-name">
+                        Копировать ссылку
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/share-detail.svg" alt="Поделиться">
+                        <div class="burger-window__content-name">
+                        Поделиться
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/home-button.svg" alt="Домой">
+                        <div class="burger-window__content-name">
+                        Домой
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/basket-burger.svg" alt="В корзину">
+                        <div class="burger-window__content-name">
+                        В корзину
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/support.svg" alt=" Написать тех. поддержке">
+                        <div class="burger-window__content-name">
+                        Написать тех. поддержке
+                        </div>
+                    </a>
+                    <a href="#" class="burger-window__content-item">
+                        <img src="img/question-2.svg" alt="Оставить обращение">
+                        <div class="burger-window__content-name">
+                        Оставить обращение
+                        </div>
+                    </a>
                     </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/share-detail.svg" alt="Поделиться">
-                    <div class="burger-window__content-name">
-                    Поделиться
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/home-button.svg" alt="Домой">
-                    <div class="burger-window__content-name">
-                    Домой
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/basket-burger.svg" alt="В корзину">
-                    <div class="burger-window__content-name">
-                    В корзину
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/support.svg" alt=" Написать тех. поддержке">
-                    <div class="burger-window__content-name">
-                    Написать тех. поддержке
-                    </div>
-                </a>
-                <a href="#" class="burger-window__content-item">
-                    <img src="img/question-2.svg" alt="Оставить обращение">
-                    <div class="burger-window__content-name">
-                    Оставить обращение
-                    </div>
-                </a>
-                </div>
+                </div>    
                 <div class="footer-detail footer-open">
                     <div class="container footer__container footer-detail__container">
                     <button type="button" id="burger-close">Закрыть</button>
@@ -74,10 +76,10 @@
             <section class="index-page__nav container">
                 <div class="index-page__nav-wrapper">
                     <nav class="index-page__nav-navbar">
-                        <a href="./subcategories.html" class="index-page__navbar-item text-font-18 selected">Женская одежда</a>
-                        <a href="./subcategories.html" class="index-page__navbar-item text-font-18">Аксессуары</a>
-                        <a href="./subcategories.html" class="index-page__navbar-item text-font-18">Мужская одежда</a>
-                        <a href="./subcategories.html" class="index-page__navbar-item text-font-18">Обувь</a>
+                        <button type="button" data-btn="subcategory-1" class="index-page__navbar-item toggle-button text-font-18 active">Женская одежда</button>
+                        <button type="button" data-btn="subcategory-2" class="index-page__navbar-item toggle-button text-font-18">Аксессуары</button>
+                        <button type="button" data-btn="subcategory-3" class="index-page__navbar-item toggle-button text-font-18">Мужская одежда</button>
+                        <button type="button" data-btn="subcategory-4" class="index-page__navbar-item toggle-button text-font-18">Обувь</button>
                     </nav>
                     <a href="./categories.html" class="index-page__nav-etc">
                         <img src="./img/menu-bar.svg" alt="navbar">
@@ -86,61 +88,61 @@
             </section>
             <section class="index-page__categories">
                 <div class="index-page__categories-block">
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/рубашка1.jpg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Новинки
                         </h4>
                     </a>
-                    <a href="categories.html"class="index-page__categories-item">
+                    <a href="subcategories.html"class="index-page__categories-item">
                         <img src="./img/штаны.jpg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Хиты продаж
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/свитшот2.jpg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Скидки
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/рубашка1.jpg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Пиджаки
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/брюки.jpg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Брюки
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/джинсы.jpg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Джинсы
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/свитшоп.webp" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Лонгсливы
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/футболка1.jpeg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Топы
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/свитшот1.jpg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Свитшоты
                         </h4>
                     </a>
-                    <a href="categories.html" class="index-page__categories-item">
+                    <a href="subcategories.html" class="index-page__categories-item">
                         <img src="./img/other-index.svg" alt="category" class="index-page__categories-img">
                         <h4 class="index-page__categories-title text-font-14">
                             Ещё
@@ -149,7 +151,7 @@
                 </div>
             </section>
             <section class="page-products container">
-                <div class="page-products__wrapper">
+                <div id="subcategory-1" class="page-products__wrapper toggle-content active">
                     <div class="page-products__col page-products__col-left">
                         <a href="./detail.html" class="page-products__col-item">
                             <img src="img/100.jpg" alt="product" class="products-col__item-img">
@@ -282,7 +284,233 @@
                             </div>
                         </a>
                     </div>
-                </div>    
+                </div>
+                <div id="subcategory-2" class="page-products__wrapper toggle-content">
+                    <div class="page-products__col page-products__col-left">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/102.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-16">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/103.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="page-products__col page-products__col-right">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/113.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/107.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> 
+                <div id="subcategory-3" class="page-products__wrapper toggle-content">
+                    <div class="page-products__col page-products__col-left">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/100.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/103.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="page-products__col page-products__col-right">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/107.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> 
+                <div id="subcategory-4" class="page-products__wrapper toggle-content">
+                    <div class="page-products__col page-products__col-left">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/100.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/101.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/102.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-16">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="page-products__col page-products__col-right">
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/105.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/106.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./detail.html" class="page-products__col-item">
+                            <img src="img/107.jpg" alt="product" class="products-col__item-img">
+                            <div class="products-col__item-info">
+                                <div class="products-col__info-title text-font-16">
+                                    Футболка с надписью корейский стиль 2021
+                                </div>
+                                <div class="products-col__info-text">
+                                    <span class="products-col__price text-font-18">
+                                        1 390 тг.
+                                    </span>
+                                    <span class="products-col__sold">
+                                        3 950 продано
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>     
             </section>
         </main>
     </div>    
