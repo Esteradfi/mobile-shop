@@ -13,6 +13,10 @@
     }
 }
 
+.page-header__title {
+    font-weight: 400;
+}
+
 .categories-page__header-button {
     display: flex;
     align-items: center;
@@ -46,7 +50,7 @@
     bottom: 50%;
     transform: translateY(50%);
     width: 2px;
-    height: 16px;
+    height: 50%;
     background-color: var(--decor-color);
 }
 

@@ -1,9 +1,50 @@
+#button-to-top {   
+    display: none;   
+    background-color: #f2f2f2;   
+    width: 50px;   
+    height: 50px;   
+    text-align: center;   
+    border-radius: 50%;   
+    margin: 30px 10px;   
+    position: fixed;   
+    bottom: 30px;   
+    right: 0;   
+    transition: background-color .3s;   
+    z-index: 20; 
+ } 
+
+ .show {
+    display: inline-block !important;
+ }
+
+ #button-to-top:active {   
+    background-color: #555; 
+ } 
+
+ #button-to-top::after {
+    content: "\f106";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #2f2f2f; 
+ } 
+
+
 /*Шапка*/
+
+.page-header__wrapper {
+    z-index: 36;
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+}
 
 .page-header {
     background-color: #f2f2f2;
     position: relative;
-    padding: 0 8px;
+    padding: 0 8px 0 3px;
     padding-top: 15px;
     display: flex;
     justify-content: flex-end;
@@ -64,7 +105,7 @@
 
 .page-header__button:last-child {
     margin-right: 5px;
-    margin-left: 12px;
+    margin-left: 12px;10px
     background-color: transparent;
 }
 
@@ -83,7 +124,9 @@
 /*Навигация*/
 
 .index-page__nav {
-    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 0;
+    padding-bottom: 10px;
 }
 
 .index-page__nav-wrapper {
@@ -195,7 +238,7 @@
 }
 
 .page-products__col {
-    width: 49%;
+    width: 48.75%;
 }
 
 .page-products__col-item {
@@ -254,3 +297,11 @@
     font-weight: 700;
     color: #9f9f9f;
 } 
+
+/*Footer*/
+.footer-gray {
+    background-color: #f6f6f6 !important;
+    position: fixed !important;
+    left: 0;
+    right: 0;
+}

@@ -101,7 +101,6 @@ $(document).ready(function () {
       $("body").css("overflow", "hidden");
       $(".subcategories-page__panel-sort").addClass('rotate');
       $('.subcategories-page__panel-hide').addClass('subcategories-page__hide-open');
-      $(".subcategories-page__control").css("border-radius", "0");
     });
   });
 
@@ -111,27 +110,34 @@ $(document).ready(function () {
     $(".subcategories-page__panel-sort").removeClass('rotate');
     $('.subcategories-page__panel-hide').removeClass('subcategories-page__hide-open');
     $("#shadow-sort").fadeOut();
-    $(".subcategories-page__control").css("border-radius", "16px 16px 0 0");
   });
 
   //Смена вида сортировки
   $('#sort-text-1').click(function() {
     document.getElementById('sort-text').innerHTML = `Сортировка <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort">`;
+    $('#sort-text-1').addClass('active');
+    $('#sort-text-2, #sort-text-3, #sort-text-4').removeClass('active');
   });
   $('#sort-text-2').click(function() {
     document.getElementById('sort-text').innerHTML = `По новизне <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort">`;
+    $('#sort-text-2').addClass('active');
+    $('#sort-text-1, #sort-text-3, #sort-text-4').removeClass('active');
   });
   $('#sort-text-3').click(function() {
     document.getElementById('sort-text').innerHTML = `По возрастанию <span>цены <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort"></span>`;
+    $('#sort-text-3').addClass('active');
+    $('#sort-text-2, #sort-text-1, #sort-text-4').removeClass('active');
   });
   $('#sort-text-4').click(function() {
     document.getElementById('sort-text').innerHTML = `По убыванию <span>цены <img src="./img/arrow-down.svg" id="sort-icon" alt="sort" class="subcategories-page__panel-sort"></span>`;
+    $('#sort-text-4').addClass('active');
+    $('#sort-text-2, #sort-text-3, #sort-text-1').removeClass('active');
   });
 
   //Переключение вида колонки продуктов
   $('.subcategories-page__panel-shake').click(function() {
     $('.subcategories-page__panel-shake').toggleClass('rotate');
-    $('.page-products').toggleClass('container subcategories-container');
+    $('.page-products').toggleClass('container');
     $('.subcategories-page__products-wrapper').toggleClass('subcategories-page__products-wrapper-toggle');
     $('.page-products__col').toggleClass('page-products__col-toggle');
     $('.page-products__col-item').toggleClass('page-products__col-item-toggle');
@@ -157,6 +163,33 @@ $(document).ready(function () {
           $(this).css("display", "none");
           $("#shadow-filter").fadeOut(297);
       });
+  });
+
+  //Показ и скрытие дополнительных цветов
+  $('#more-colors').click(function() {
+    $('.second-colors').removeClass('toggle-colors');
+    $('#more-colors').addClass('toggle-colors');
+  });
+
+  $('#more-colors-close').click(function() {
+    $('.second-colors').addClass('toggle-colors');
+    $('#more-colors').removeClass('toggle-colors');
+  });
+
+  //Подставление значений цены min max
+  $('#price-low-block').click(function() {
+    $('#min-price').val('0');
+    $('#max-price').val('2990');
+  });
+
+  $('#price-medium-block').click(function() {
+    $('#min-price').val('3000');
+    $('#max-price').val('8990');
+  });
+
+  $('#price-high-block').click(function() {
+    $('#min-price').val('9000');
+    $('#max-price').val('14990');
   });
 
   //Нажатие на кнопку Применить и на кнопку Сбросить
@@ -363,13 +396,12 @@ $(document).ready(function () {
   });
 
   //Счётчик корзины
-  let count = 0;
+  let countBasket = 0;
 
   $("button.to-basket").click(function (event) {
     event.preventDefault();
-    $("#counter").text(++count);
+    $("#counter").text(++countBasket);
     $("#basket-counter").css("display", "block");
-    $("#counter").text(count);
   });
 
   //Увеличение картинок в addbasket
@@ -392,4 +424,19 @@ $(document).ready(function () {
           .css("margin", "0 8px");
       });
   });
+});
+
+jQuery(document).ready(function() {
+  var btn = $('#button-to-top');  
+  $(window).scroll(function() {     
+    if ($(window).scrollTop() > 400) {
+       btn.addClass('show');
+     } else {
+       btn.removeClass('show');
+     }
+   });
+   btn.on('click', function(e) {
+     e.preventDefault();
+     $('html, body').animate({scrollTop:0}, '300');
+   });
 });
