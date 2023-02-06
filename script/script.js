@@ -96,19 +96,30 @@ $(document).ready(function () {
   });
 
   //Выпадающее меню
+  let = isSortShow = false;
   $("#sort").click(function() {
-    $("#shadow-sort").fadeIn(function () {
-      $("body").css("overflow", "hidden");
-      $(".subcategories-page__panel-sort").addClass('rotate');
-      $('.subcategories-page__panel-hide').addClass('subcategories-page__hide-open');
-    });
+    if (isSortShow) {
+      $("body").css("overflow", "auto");
+      $(".subcategories-page__panel-sort").removeClass('rotate');
+      $('.subcategories-page__panel-hide').removeClass('subcategories-page__hide-open');
+      $("#shadow-sort").fadeOut();
+      isSortShow = false;
+    } else {
+      $("#shadow-sort").fadeIn(function () {
+        $("body").css("overflow", "hidden");
+        $(".subcategories-page__panel-sort").addClass('rotate');
+        $('.subcategories-page__panel-hide').addClass('subcategories-page__hide-open');
+        isSortShow = true;
+    })
+    }
   });
 
-  $("#shadow-sort, #filter, .subcategories-page__nav, .page-header__form-input, .subcategories-page__header, .subcategories-page__hide-item")
+  $("#shadow-sort, #filter, .subcategories-page__hide-open, .subcategories-page__nav, .page-header__form-input, .subcategories-page__header, .subcategories-page__hide-item")
   .click(function () {
     $("body").css("overflow", "auto");
     $(".subcategories-page__panel-sort").removeClass('rotate');
     $('.subcategories-page__panel-hide').removeClass('subcategories-page__hide-open');
+    isSortShow = false;
     $("#shadow-sort").fadeOut();
   });
 
@@ -144,6 +155,7 @@ $(document).ready(function () {
     $('.products-col__item-img').toggleClass('products-col__item-img-toggle');
     $('.products-col__item-info').toggleClass('products-col__item-info-toggle');
     $('.products-col__info-text').toggleClass('products-col__info-text-toggle');
+    $('body').toggleClass('body-white-toggle');
   });
 
   //Вызов модального окна фильтра
@@ -429,7 +441,7 @@ $(document).ready(function () {
 jQuery(document).ready(function() {
   var btn = $('#button-to-top');  
   $(window).scroll(function() {     
-    if ($(window).scrollTop() > 400) {
+    if ($(window).scrollTop() > 800) {
        btn.addClass('show');
      } else {
        btn.removeClass('show');

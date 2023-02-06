@@ -25,6 +25,7 @@
 /*Категории*/
 .categories-page__section {
     display: flex;
+    margin-top: 4px;
 }
 
 .categories-page__sidebar-item {

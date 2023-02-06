@@ -1,8 +1,8 @@
 #button-to-top {   
     display: none;   
-    background-color: #f2f2f2;   
-    width: 50px;   
-    height: 50px;   
+    background-color: #fff;   
+    width: 45px;   
+    height: 45px;   
     text-align: center;   
     border-radius: 50%;   
     margin: 30px 10px;   
@@ -26,9 +26,9 @@
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #2f2f2f; 
+    font-size: 2.5em;
+    line-height: 40px;
+    color: gray; 
  } 
 
 
@@ -44,7 +44,7 @@
 .page-header {
     background-color: #f2f2f2;
     position: relative;
-    padding: 0 8px 0 3px;
+    padding: 0 3px 0 2px;
     padding-top: 15px;
     display: flex;
     justify-content: flex-end;
@@ -238,13 +238,13 @@
 }
 
 .page-products__col {
-    width: 48.75%;
+    width: 49%;
 }
 
 .page-products__col-item {
     width: 100%;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     flex-direction: column;
 }
 
@@ -300,8 +300,13 @@
 
 /*Footer*/
 .footer-gray {
+    padding: 10.5px 0 !important;
     background-color: #f6f6f6 !important;
     position: fixed !important;
     left: 0;
     right: 0;
+}
+
+.basket-counter-menu {
+    right: 0 !important;
 }
