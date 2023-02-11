@@ -822,10 +822,11 @@ aspect-ratio: 1;
 object-fit: cover;
 }
 
-#detail-page__slide-close {
+#detail-page__slide-close img {
 width: 21px; height: 21px;
 position: absolute;
 font-size: 40px;
+top: 22px;
 right: 20px;
 cursor: pointer;
 display: block;
@@ -1019,7 +1020,6 @@ color: #fff;
 
 
 .detail-page__desc-top small {
-  width: 33%;
   text-align: center;
   font-size: 10px;
   line-height: 9px;
@@ -1051,8 +1051,8 @@ color: #fff;
   display: block;
   width: 17%;
   height: 15px;
-  background-repeat: no-repeat;
-  background-image: url("../img/like.svg");
+  text-align: center;
+
 }
 
 /* детальная страница характеристики товара */
@@ -1137,11 +1137,11 @@ color: #fff;
   margin-top: 0;
 }
 
-#detail-page__params-window #detail-page__params-close {
+#detail-page__params-window #detail-page__params-close img {
   width: 21px; height: 21px;
   position: absolute;
   font-size: 40px;
-  top: -6px; right: 15px;
+  top: 15px; right: 15px;
   cursor: pointer;
   display: block;
   color: #909090;
@@ -1488,11 +1488,11 @@ color: #fff;
   margin-top: 0;
 }
 
-#detail-page__info-window #detail-page__info-close {
+#detail-page__info-window #detail-page__info-close img {
   width: 21px; height: 21px;
   position: absolute;
   font-size: 40px;
-  top: -7px; right: 15px;
+  top: 15px; right: 15px;
   cursor: pointer;
   display: block;
   color: #909090;
@@ -1554,11 +1554,12 @@ color: #fff;
   aspect-ratio: 1;
 }
 
-#detail-page__info-img-close {
+#detail-page__info-img-close img {
   width: 21px; height: 21px;
   position: absolute;
   font-size: 40px;
   right: 15px;
+  top: 23px;
   cursor: pointer;
   display: block;
   color: #fff;
@@ -2043,12 +2044,13 @@ object-fit: cover;
 aspect-ratio: 1;
 }
 
-#add-basket__color-close {
+#add-basket__color-close img {
   width: 21px;
   height: 21px;
   position: absolute;
   font-size: 40px;
   right: 10px;
+  top: 22px;
   cursor: pointer;
   display: block;
   color: #fff;
@@ -2516,6 +2518,7 @@ aspect-ratio: 1;
 }
 
 .recall-page__wrapper {
+  background-color: #fff;
   display: flex;
 	flex-direction: column;
 	min-height: 100%;
@@ -2615,13 +2618,19 @@ aspect-ratio: 1;
 }
 
 .recall {
-  padding: 15px 0;
-  background-color: #fff;
+  background-color: #f2f2f2;
   margin-bottom: 10px;
 }
 
+.recall .container {
+  background-color: #fff;
+  padding: 10px 8px;
+  margin: 0;
+  border-radius: 16px 16px 0 0;
+}
+
 .recall .container:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .recall-page__header {
@@ -2666,6 +2675,7 @@ aspect-ratio: 1;
 .recall-page__img-block {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 349px) {
@@ -2754,11 +2764,12 @@ aspect-ratio: 1;
   margin-top: 15px;
 }
 
-#recall-page__img-close {
+#recall-page__img-close img {
 width: 21px; height: 21px;
 position: absolute;
 font-size: 40px;
 right: 16px;
+top: 22px;
 cursor: pointer;
 display: block;
 color: #fff;

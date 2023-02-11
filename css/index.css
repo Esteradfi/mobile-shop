@@ -1,11 +1,11 @@
 #button-to-top {   
     display: none;   
     background-color: #fff;   
-    width: 45px;   
-    height: 45px;   
+    width: 43px;   
+    height: 43px;   
     text-align: center;   
     border-radius: 50%;   
-    margin: 30px 10px;   
+    margin: 60px 18px;   
     position: fixed;   
     bottom: 30px;   
     right: 0;   

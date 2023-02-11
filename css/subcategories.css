@@ -8,7 +8,7 @@
     position: relative;
     display: flex;
     z-index: 36;
-    padding: 1px 11px 10px 8px;
+    padding: 3px 11px 14px 8px;
     background-color: #f2f2f2;
     margin-bottom: 0;
 }
@@ -43,18 +43,18 @@
 
 /*Панель управления*/
 .subcategories-page__control-section {
-    color: #767676;
+    color: #434343;
     position: relative;
     z-index: 35;
     background-color: #f2f2f2;
     margin-bottom: 8px !important;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .subcategories-page__control {
     margin-bottom: 0;
-    border-radius: 30px 30px 0 0;
-    padding: 15px 8px;
+    border-radius: 16px 16px 0 0;
+    padding: 13px 8px;
     background-color: #fff; 
 }
 
@@ -69,6 +69,23 @@
     text-align: center;
     position: relative;
 }
+
+.subcategories-page__panel-item:first-child {
+    width: 38%;
+}
+
+@media screen and (max-width: 328px) {
+    .subcategories-page__panel-item:first-child {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 316px) {
+    .subcategories-page__panel-item:first-child {
+        width: 33%;
+    }
+}
+
 
 .subcategories-page__panel-list {
     color: #cc7240;
@@ -92,7 +109,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 47px;
+    top: 43px;
 }
 
 .subcategories-page__hide-open {
@@ -128,7 +145,7 @@
     width: 100%;
     text-align: left;
     padding: 10px;
-    color: #767676;
+    color: #434343;
     list-style-type: none;
 }
 
@@ -161,6 +178,12 @@
     color: #f6f6f6;
     margin: 0 15px;
     font-size: 15px;
+}
+
+@media screen and (max-width: 340px) {
+    .subcategories-page__panel-separator {
+        margin: 0 5px;
+    }
 }
 
 .subcategories-page__panel-shake {
@@ -261,7 +284,7 @@
   #filter-window {
     width: 100%;
     padding: 18px 0px;
-    border-radius: 40px 40px 0 0;
+    border-radius: 32px 32px 0 0;
     background: #fafafa;
     position: fixed;
     transition: ease 0.6s;
@@ -280,6 +303,7 @@
     display: flex;
     flex-direction: column;
     min-height: 90.6%;
+    padding-top: 18px;
   }
 
   @media screen and (max-width: 413px) {
@@ -297,11 +321,11 @@
   }
 
   
-  #filter-window #filter-close {
+  #filter-window #filter-close img {
     width: 21px; height: 21px;
     position: absolute;
     font-size: 40px;
-    top: -4px; right: 10px;
+    top: 35px; right: 15px;
     cursor: pointer;
     display: block;
     color: #050505;
@@ -318,6 +342,10 @@
     margin-bottom: 4vh;
   }
 
+  .filter-margin__bottom:first-child {
+    margin-bottom: calc(4vh - 10px);
+  }
+
   #filter-window p {
     margin-bottom: 10px;
   }
@@ -327,7 +355,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .filter-window__colors-item {
@@ -345,7 +373,7 @@
   }
 
   .filter-window__colors-lbl div {
-    padding: 12px 4px;
+    padding: 10px 4px;
     background-color: #efefef;
     border-radius: 40px;
   }
@@ -365,15 +393,17 @@
 
 .filter-window__price-inputs input {
     width: 47%;
-    padding: 11px 8px;
+    padding: 10px 8px;
     text-align: center;
     background-color: #efefef;
     border-radius: 40px;
     border: none;
+    columns: #434343;
 }
 
 .filter-window__price-inputs input::placeholder {
-    font-size: 14px;
+    font-size: 16px;
+    color: #434343;
 }
 
 @media screen and (max-width: 350px) {
@@ -410,7 +440,7 @@
 }
 
 .filter-window__price-text  {
-    padding: 3.5px 4px;
+    padding: 3px 4px;
     background-color: #efefef;
     border-radius: 40px;
     display: flex;
@@ -418,7 +448,9 @@
 }
 
 .filter-window__price-text small {
-    color: #b3b3b3;
+    color: #434343;
+    font-size: 12px;
+    font-weight: 100;
 }
 
 .filter-window__price-item input[type="radio"]:checked +  .filter-window__price-lbl .filter-window__price-text{
@@ -436,7 +468,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .filter-window__sizes-item {
@@ -446,7 +478,7 @@
   }
 
   .filter-window__sizes-lbl div {
-    padding: 12px 4px;
+    padding: 10px 4px;
     background-color: #efefef;
     border-radius: 40px;
   }

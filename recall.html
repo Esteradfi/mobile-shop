@@ -22,11 +22,11 @@
     <div id="shadow"></div>
     <div id="shadow-dark"></div>
     <div id="shadow-dark-2">
-      <span id="add-basket__color-close">ₓ</span>
+      <span id="add-basket__color-close"><img src="./img/close-button-white.svg" alt=""></span>
       <div class="detail-page__dots-color swiper-pagination"></div>
     </div>
     <div id="shadow-dark-5">
-      <span id="recall-page__img-close">ₓ</span>
+      <span id="recall-page__img-close"><img src="./img/close-button-white.svg" alt=""></span>
       <div class="detail-page__dots-recall"></div>
       <div id="recall-page__img-window">
         <div class="recall-page__img-window-wrapper">
@@ -60,14 +60,64 @@
     </div>
     <div class="recall-page__wrapper">
       <div class="recall-page__wrapper-content">
-        <header class="header-recall">
-          <div class="header-top-recall">
-            <div class="container header-recall__container">
-              <a href="detail.html" class="back"></a>
-              <h2 class="section__title text-font-18">Отзывы</h2>
-            </div>
-          </div>
+        <header class="page-header categories-page__header">
+          <a href="./index.html" class="page-header__button">
+              <img src="./img/back-index.svg" alt="etc">
+          </a>
+          <h3 class="page-header__title">Отзывы</h3>
+          <button class="page-header__button categories-page__header-button" id="burger">
+              <img src="./img/dots.svg" alt="etc">
+          </button>
         </header>
+        <div id="burger-window">
+          <div class="burger-window__wrapper">
+              <div class="burger-window__content-wrapper">
+                  <div class="burger-window__content">
+                  <a href="#" class="burger-window__content-item">
+                      <img src="img/link.svg" alt="Скопировать ссылку">
+                      <div class="burger-window__content-name">
+                      Копировать ссылку
+                      </div>
+                  </a>
+                  <a href="#" class="burger-window__content-item">
+                      <img src="img/share-detail.svg" alt="Поделиться">
+                      <div class="burger-window__content-name">
+                      Поделиться
+                      </div>
+                  </a>
+                  <a href="#" class="burger-window__content-item">
+                      <img src="img/home-button.svg" alt="Домой">
+                      <div class="burger-window__content-name">
+                      Домой
+                      </div>
+                  </a>
+                  <a href="#" class="burger-window__content-item">
+                      <img src="img/basket-burger.svg" alt="В корзину">
+                      <div class="burger-window__content-name">
+                      В корзину
+                      </div>
+                  </a>
+                  <a href="#" class="burger-window__content-item">
+                      <img src="img/support.svg" alt=" Написать тех. поддержке">
+                      <div class="burger-window__content-name">
+                      Контакты
+                      </div>
+                  </a>
+                  <a href="#" class="burger-window__content-item">
+                      <img src="img/question-2.svg" alt="Оставить обращение">
+                      <div class="burger-window__content-name">
+                      Оставить обращение
+                      </div>
+                  </a>
+                  </div>
+              </div>    
+              <div class="footer-detail footer-open">
+                  <div class="container footer__container footer-detail__container">
+                  <button type="button" id="burger-close">Закрыть</button>
+                  </div>
+              </div>
+          </div>    
+        </div>
         <main>
           <section class="recall">
             <div class="container">
@@ -508,6 +558,8 @@
     <script src="script/jquery-3.6.0.min.js"></script>
     <!-- слайдер свайпер -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- слайдерs -->
+    <script src="./script/swiper.js"></script>
     <!-- скрипты -->
     <script src="script/script.js"></script>
   </body>
