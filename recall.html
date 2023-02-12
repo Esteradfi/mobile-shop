@@ -30,19 +30,20 @@
       <div class="detail-page__dots-recall"></div>
       <div id="recall-page__img-window">
         <div class="recall-page__img-window-wrapper">
-          <div class="recall-page__img-window-slider swiper">
+          <div class="recall-page__img-window-slider swiper-new">
             <div class="swiper-wrapper">
-              <div class="swiper-slide recall-page__img-window-block">
+              <div class="swiper-slide" data-id="1">
                 <img src="img/32.jpg" alt="Товар" />
               </div>
-              <div class="swiper-slide recall-page__img-window-block">
+              <div class="swiper-slide" data-id="2">
                 <img src="img/23.jpg" alt="Товар" />
               </div>
-              <div class="swiper-slide recall-page__img-window-block">
+              <div class="swiper-slide" data-id="3">
                 <img src="img/24.jpg" alt="Товар" />
               </div>
             </div>
           </div>
+
           <div class="recall-page__img-window-info">
             <div class="recall-page__text recall-page__img-window-text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
@@ -54,9 +55,13 @@
               <span>Название: Товара</span>
               <span>Размер: Товара</span>
             </div>
-          </div> 
-          </div>  
+          </div>
+          </div>
         </div>  
+    </div>
+    <div class="done-basket" id="done">
+      <img src="./img/done.svg" alt="Добавлено">
+      Товар добавлен в корзину
     </div>
     <div class="recall-page__wrapper">
       <div class="recall-page__wrapper-content">
@@ -137,17 +142,17 @@
                   voluptas animi ad laborum, reiciendis mollitia debitis vero ea
                   minima optio cum.
                 </div>
-              <div class="recall-page__img-block">
-              <div class="recall-page__img">
-                <img src="img/32.jpg" alt="Товар" />
-              </div>
-              <div class="recall-page__img">
-                <img src="img/23.jpg" alt="Товар" />
-              </div>
-              <div class="recall-page__img">
-                <img src="img/24.jpg" alt="Товар" />
-              </div>   
-              </div>
+                <div class="recall-page__img-block">
+                  <div class="recall-page__img" data-id="0">
+                    <img src="img/32.jpg" alt="Товар" />
+                  </div>
+                  <div class="recall-page__img" data-id="1">
+                    <img src="img/23.jpg" alt="Товар" />
+                  </div>
+                  <div class="recall-page__img" data-id="2">
+                    <img src="img/24.jpg" alt="Товар" />
+                  </div>
+                </div>
             </div>
             <div class="container">
               <div class="recall-page__header">
@@ -167,15 +172,15 @@
                   minima optio cum.
                 </div>
               <div class="recall-page__img-block">
-              <div class="recall-page__img">
-                <img src="img/32.jpg" alt="Товар" />
-              </div>
-              <div class="recall-page__img">
-                <img src="img/23.jpg" alt="Товар" />
-              </div>
-              <div class="recall-page__img">
-                <img src="img/24.jpg" alt="Товар" />
-              </div>   
+                <div class="recall-page__img" data-id="0">
+                  <img src="img/32.jpg" alt="Товар" />
+                </div>
+                <div class="recall-page__img" data-id="1">
+                  <img src="img/23.jpg" alt="Товар" />
+                </div>
+               <div class="recall-page__img" data-id="2">
+                  <img src="img/24.jpg" alt="Товар" />
+                </div>  
               </div>
             </div>
           </section>
@@ -481,7 +486,7 @@
               </div>  
               <div class="footer footer-detail footer-open">
                 <div class="container footer__container footer-detail__container">
-                  <button type="button" class="footer-detail__btn basket to-basket">
+                  <button type="button" id="btn-to-basket" class="footer-detail__btn basket to-basket">
                     В корзину
                   </button>
                 </div>

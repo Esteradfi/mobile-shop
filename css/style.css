@@ -2187,6 +2187,49 @@ aspect-ratio: 1;
   background-color: #f8f8f8;
 }
 
+/*Появляющийся header*/
+#header-hide {
+  display: none;
+}
+
+.show-header {
+  display: block !important;
+}
+
+.page-header__button {
+  position: relative;
+  margin-left: 3px;
+  background: transparent;
+}
+
+.page-header__button .basket-counter {
+  top: 0;
+}
+
+/*Всплывающее окно done*/
+.done-basket {
+  z-index: 100;
+  position: fixed;
+  background-color: #000;
+  color: #fff;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0.9;
+  padding: 16px 8px 20px 8px;
+  border-radius: 6px;
+  left: 20%;
+  right: 20%;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.done-basket img {
+  width: 40px;
+  margin-bottom: 5px;
+}
+
 .help-size__row-1 {
   padding: 11px 0 15px 0;
   background-color: #fff;

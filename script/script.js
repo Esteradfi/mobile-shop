@@ -228,7 +228,7 @@ $(document).ready(function () {
     });
   });
 
-  $("#add-basket__close, #shadow").click(function () {
+  $("#add-basket__close, #btn-to-basket, #shadow").click(function () {
       $("body").css("overflow", "auto");
       $('#add-basket').removeClass('add-basket-open');
       $("#add-basket").animate({ opacity: 0 }, 198, function () {
@@ -371,8 +371,10 @@ $(document).ready(function () {
             .css("margin", "0");
     });
   });
-
-  $("#recall-page__img-close, #shadow-dark-5").click(function () {
+  $("#recall-page__img-close, #shadow-dark-5").click(function (e) {
+    if ($(e.target).closest(".swiper-slide-active").length) {
+      return;
+    }
       $("#recall-page__img-window").animate({ opacity: 0 }, 198, function () {
         $("body").css("overflow", "auto");
           $(this).css("display", "none");
@@ -410,10 +412,10 @@ $(document).ready(function () {
   //Счётчик корзины
   let countBasket = 0;
 
-  $("button.to-basket").click(function (event) {
+  $("#btn-to-basket").click(function (event) {
     event.preventDefault();
-    $("#counter").text(++countBasket);
-    $("#basket-counter").css("display", "block");
+    $(".counter").text(++countBasket);
+    $(".basket-counter").css("display", "block");
   });
 
   //Увеличение картинок в addbasket
@@ -436,8 +438,36 @@ $(document).ready(function () {
           .css("margin", "0 8px");
       });
   });
+
+  //Всплывающее окно, информирующее о добавлении в корзину или в избранное
+  $("#btn-to-basket").click(function () {
+    setTimeout(() => {
+      $('#done').css("display", "flex");
+    }, 100)
+    setTimeout(() => {
+      $('#done').css("display", "none");
+    }, 2000)
+  });
+
+  let isFavorites = false;
+  $("#favorites").click(function () {
+    if (isFavorites) {
+      document.querySelector('#favorites-img').setAttribute('src', './img/like.svg');
+      isFavorites = false;
+    } else {
+      document.querySelector('#favorites-img').setAttribute('src', './img/like-active.svg');
+      setTimeout(() => {
+        $('#done-favorites').css("display", "flex");
+      }, 0)
+      setTimeout(() => {
+        $('#done-favorites').css("display", "none");
+      }, 2000)
+      isFavorites = true;
+    }
+  });
 });
 
+//Промотка страницы вверх
 jQuery(document).ready(function() {
   var btn = $('#button-to-top');  
   $(window).scroll(function() {     
@@ -450,5 +480,16 @@ jQuery(document).ready(function() {
    btn.on('click', function(e) {
      e.preventDefault();
      $('html, body').animate({scrollTop:0}, '300');
+   });
+});
+
+jQuery(document).ready(function() {
+  var hideHeader = $('#header-hide');  
+  $(window).scroll(function() {     
+    if ($(window).scrollTop() > 200) {
+       hideHeader.addClass('show-header');
+     } else {
+       hideHeader.removeClass('show-header');
+     }
    });
 });
