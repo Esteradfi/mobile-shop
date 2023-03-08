@@ -291,7 +291,7 @@ $(document).ready(function () {
   });
 
   $("#detail-page__params-close, #shadow").click(function () {
-    $('#detail-page__params-window').removeClass('add-params-open');
+        $('#detail-page__params-window').removeClass('add-params-open');
       $("#detail-page__params-window").animate({ opacity: 0 }, 198, function () {
         $("body").css("overflow", "auto");
           $(this).css("display", "none");
@@ -326,7 +326,7 @@ $(document).ready(function () {
     $("#shadow-dark-4").fadeIn(297, function () {
       $("body").css("overflow", "hidden");
         $("#detail-page__info-img-window")
-            .css("display", "block")
+            .css("visibility", "visible")
             .animate({ opacity: 1 }, 198);
     });
   });
@@ -334,7 +334,7 @@ $(document).ready(function () {
   $("#detail-page__info-img-close, #shadow-dark-4").click(function () {
       $("#detail-page__info-img-window").animate({ opacity: 0 }, 198, function () {
         $("body").css("overflow", "auto");
-          $(this).css("display", "none");
+          $(this).css("visibility", "hidden");
           $("#shadow-dark-4").fadeOut(297);
       });
   });
@@ -345,15 +345,16 @@ $(document).ready(function () {
     $("#shadow-dark-3").fadeIn(297, function () {
       $("body").css("overflow", "hidden");
         $("#detail-page__slide-window")
-            .css("display", "block")
+            .css("visibility", "visible")
             .animate({ opacity: 1 }, 198);
     });
   });
-
+  
   $("#detail-page__slide-close, #shadow-dark-3").click(function () {
-      $("#detail-page__slide-window").animate({ opacity: 0 }, 198, function () {
+    $(".detail-page__slide-window-menu .detail-page__dots").css("display", "none");
+      $("#detail-page__slide-window").animate({ opacity: 0 }, 198, function () {        
         $("body").css("overflow", "auto");
-          $(this).css("display", "none");
+          $(this).css("visibility", "hidden");
           $("#shadow-dark-3").fadeOut(297);
       });
   });
@@ -423,7 +424,7 @@ $(document).ready(function () {
     event.preventDefault();
     $("#shadow-dark-2").fadeIn(297, function () {
         $("#add-basket__color-window")
-            .css("display", "block")
+            .css("visibility", "visible")
             .animate({ opacity: 1 }, 198);
         $("div.container")
             .css("margin", "0");
@@ -432,7 +433,7 @@ $(document).ready(function () {
 
   $("#add-basket__color-close, #shadow-dark-2").click(function () {
       $("#add-basket__color-window").animate({ opacity: 0 }, 198, function () {
-          $(this).css("display", "none");
+          $(this).css("visibility", "hidden");
           $("#shadow-dark-2").fadeOut(297);
         $("div.container")
           .css("margin", "0 8px");
@@ -483,13 +484,20 @@ jQuery(document).ready(function() {
    });
 });
 
+
+/* Скорость поялвения элемента */
+var speedOpacity = 295;
+var speedOpacityForSVG = speedOpacity/250;
+
+/* Изменение шапки */
 jQuery(document).ready(function() {
-  var hideHeader = $('#header-hide');  
-  $(window).scroll(function() {     
-    if ($(window).scrollTop() > 200) {
-       hideHeader.addClass('show-header');
-     } else {
-       hideHeader.removeClass('show-header');
-     }
-   });
+  $(window).scroll(function(){
+    var offsetFromScreenTop = $(window).scrollTop();
+    $(".header-top .page-header__form").css("opacity", offsetFromScreenTop/speedOpacity);
+    $(".header-top").css("background-color", "rgba(242, 242, 242, " + offsetFromScreenTop/speedOpacity + ")");
+    $(".header-top .page-header__button").css("background-color", "rgba(0, 0, 0, " + (0.7 - offsetFromScreenTop/(speedOpacity/3.5)) + ")");
+    $(".header-top .page-header__button:nth-child(1) svg").css("fill", "rgb(" + (255 - offsetFromScreenTop/speedOpacityForSVG) +", " + (255 - offsetFromScreenTop/speedOpacityForSVG) + ", " + (255 - offsetFromScreenTop/speedOpacityForSVG) + ")");
+    $(".header-top .page-header__button:nth-child(4) svg").css("fill", "rgb(" + (255 - offsetFromScreenTop/speedOpacityForSVG) +", " + (255 - offsetFromScreenTop/speedOpacityForSVG) + ", " + (255 - offsetFromScreenTop/speedOpacityForSVG) + ")");
+    $(".header-top .page-header__button:nth-child(3) svg path").css("stroke", "rgb(" + (255 - offsetFromScreenTop/speedOpacityForSVG) +", " + (255 - offsetFromScreenTop/speedOpacityForSVG) + ", " + (255 - offsetFromScreenTop/speedOpacityForSVG) + ")");
+  });
 });

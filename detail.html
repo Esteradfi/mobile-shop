@@ -14,7 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
   </head>
-  <body>
+  <body class="body-detail">
     <div id="shadow"></div>
     <div id="shadow-dark"></div>
     <div id="shadow-dark-2">
@@ -29,7 +29,9 @@
     </div>
     <div id="shadow-dark-4">
       <span id="detail-page__info-img-close"><img src="./img/close-button-white.svg" alt=""></span>
-      <div class="detail-page__dots-add detail-page__slide-dots"></div>
+      <div class="detail-page__dots-add detail-page__slide-dots">
+        <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span>
+      </div>
     </div>
     <div class="done-basket" id="done">
       <img src="./img/done.svg" alt="Добавлено">
@@ -40,7 +42,8 @@
       Товар добавлен в избранное
     </div>
     <div class="page-wrapper">
-      <div class="page-header__wrapper" id="header-hide">
+
+      <!-- <div class="page-header__wrapper" id="header-hide">
         <header class="page-header subcategories-page__header">
           <a href="./index.html" class="page-header__button">
               <img src="./img/back-index.svg" alt="etc">
@@ -61,18 +64,47 @@
               <img src="./img/dots.svg" alt="etc">
           </button>
         </header>
-      </div>
-      <header class="detail-page__header">
-        <a href="index.html" class="detail-page__back"></a>
-        <div class="detail-page__block">
-          <button type="button" class="basket">
-            <div class="basket-counter" id="basket-counter">
-              <span id="counter" class="counter"></span>
-            </div>
-          </button>
-          <button type="button" class="burger" id="burger"></button>
-        </div>
+      </div> -->
+
+      <header class="page-header header-top" id="header-hide">
+        <a href="./index.html" class="page-header__button">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.43971 14.9378L16.9371 6.44049C17.5244 5.85317 18.4741 5.85317 19.0551 6.44049L20.4672 7.85255C21.0545 8.43986 21.0545 9.38957 20.4672 9.97063L14.4503 16L20.4735 22.0231C21.0608 22.6104 21.0608 23.5601 20.4735 24.1412L19.0614 25.5595C18.4741 26.1468 17.5244 26.1468 16.9433 25.5595L8.44596 17.0622C7.85239 16.4749 7.85239 15.5251 8.43971 14.9378Z"/>
+            </svg>
+        </a>
+        <form action="" class="page-header__form" style="opacity: 0;">
+            <button class="page-header__form-button">
+
+            </button>
+            <input type="search" class="page-header__form-input" placeholder="Поиск">
+        </form>
+        <button class="page-header__button" id="burger">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="15" fill="none" stroke="transparent" fill-opacity="0"/>
+            <path d="M24.0202 19.6318L24.0202 19.6318C23.9879 19.774 23.8614 19.875 23.7155 19.875H12.2645H11.4988L11.6522 20.6252L11.9079 21.8752L12.0101 22.375H12.5202H23.0053C23.2058 22.375 23.3544 22.5612 23.31 22.7568L23.0945 23.705L22.9845 24.1891L23.431 24.4058C23.9541 24.6597 24.3125 25.1949 24.3125 25.8125C24.3125 26.6754 23.613 27.375 22.75 27.375C21.8871 27.375 21.1875 26.6754 21.1875 25.8125C21.1875 25.3754 21.3665 24.9811 21.657 24.6965L22.7507 23.625H21.2197H13.0303H11.4991L12.593 24.6965C12.8835 24.9811 13.0625 25.3754 13.0625 25.8125C13.0625 26.6754 12.3629 27.375 11.5 27.375C10.6371 27.375 9.9375 26.6754 9.9375 25.8125C9.9375 25.2339 10.2521 24.728 10.723 24.4572L11.1141 24.2323L11.0237 23.7902L8.27963 10.3748L8.17741 9.875H7.66731H4.9375C4.7649 9.875 4.625 9.7351 4.625 9.5625V8.9375C4.625 8.7649 4.7649 8.625 4.9375 8.625H8.94254C9.09102 8.625 9.21896 8.72947 9.24869 8.87483L9.2487 8.87486L9.60674 10.6253L9.70897 11.125H10.2191H25.5621C25.7626 11.125 25.9113 11.3112 25.8668 11.5068L24.0202 19.6318Z" stroke="#000" stroke-width="1.25"/>
+            </svg>
+          <div class="basket-counter" id="basket-counter">
+            <span id="counter" class="counter"></span>
+          </div>
+        </button>
+        <button class="page-header__button" id="burger">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+          width="30px" height="30px" viewBox="0 0 512.000000 512.000000"
+          preserveAspectRatio="xMidYMid meet">
+         
+         <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+         fill="" stroke="none">
+         <path d="M841 3024 c-253 -68 -410 -331 -346 -579 67 -256 329 -415 580 -350
+         190 50 330 207 358 401 48 331 -270 615 -592 528z"/>
+         <path d="M2441 3024 c-253 -68 -410 -331 -346 -579 67 -256 329 -415 580 -350
+         190 50 330 207 358 401 48 331 -270 615 -592 528z"/>
+         <path d="M4041 3024 c-253 -68 -410 -331 -346 -579 67 -256 329 -415 580 -350
+         190 50 330 207 358 401 48 331 -270 615 -592 528z"/>
+         </g>
+         </svg>
+        </button>
       </header>
+
       <main class="detail-page__main">
         <div id="burger-window">
           <div class="burger-window__wrapper">
@@ -185,7 +217,7 @@
                   <span class="new">10 500 тг.</span>
                   <span class="old">10 500 тг.</span>
                 </div>
-                <small>Купили: более <br> <span>2 000 раз</span></small>
+                <small>Купили более <br> <span>2 000 раз</span></small>
               </div>
               <div class="detail-page__desc-bottom">
                 <div class="detail-page__desc-name section__title">
@@ -331,7 +363,7 @@
                   </a>
                   <div class="detail-page__similar-info">
                     <a href="/" class="detail-page__similar-name text-font-16">
-                      Футболка с принтами
+                      Футболка с принтами корейский стиль
                     </a>
                     <div class="detail-page__similar-sold text-font-14">900 продано</div>
                     <div class="detail-page__similar-price text-font-18">1 290 тг.</div>
@@ -630,7 +662,7 @@
                 <div class="add-basket__custom-scroll">
                   <div class="add-basket__color-block">
                     <div class="add-basket__color-col">
-                      <div class="add-basket__color-btn">
+                      <div class="add-basket__color-btn" data-id="1">
                         <img src="img/maximize.svg" class="add-basket__color-zoom">
                         <input
                           id="color-1"
@@ -645,7 +677,7 @@
                           </div> 
                         </label>
                       </div>
-                      <div class="add-basket__color-btn">
+                      <div class="add-basket__color-btn" data-id="2">
                         <img src="img/maximize.svg" class="add-basket__color-zoom">
                         <input
                           id="color-2"
@@ -662,7 +694,7 @@
                       </div>
                     </div>
                     <div class="add-basket__color-col">
-                      <div class="add-basket__color-btn">
+                      <div class="add-basket__color-btn" data-id="3">
                         <img src="img/maximize.svg" class="add-basket__color-zoom">
                         <input
                           id="color-3"
@@ -677,7 +709,7 @@
                           </div> 
                         </label>
                       </div>
-                      <div class="add-basket__color-btn">
+                      <div class="add-basket__color-btn" data-id="4">
                         <img src="img/maximize.svg" class="add-basket__color-zoom">
                         <input
                           id="color-4"
@@ -694,7 +726,7 @@
                       </div>
                     </div>
                     <div class="add-basket__color-col">
-                      <div class="add-basket__color-btn">
+                      <div class="add-basket__color-btn" data-id="5">
                         <img src="img/maximize.svg" class="add-basket__color-zoom">
                         <input
                           id="color-5"
@@ -709,7 +741,7 @@
                           </div> 
                         </label>
                       </div>
-                      <div class="add-basket__color-btn">
+                      <div class="add-basket__color-btn" data-id="6">
                         <img src="img/maximize.svg" class="add-basket__color-zoom">
                         <input
                           id="color-6"
@@ -726,7 +758,7 @@
                       </div>
                     </div>
                     <div class="add-basket__color-col">
-                      <div class="add-basket__color-btn">
+                      <div class="add-basket__color-btn" data-id="7">
                         <img src="img/maximize.svg" class="add-basket__color-zoom">
                         <input
                           id="color-7"
@@ -993,6 +1025,9 @@
     <!-- настройка свайпера -->
     <script src="script/swiper.js"></script>
     <!-- скрипты -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/2.0.0/jquery.mobile-events.min.js"> </script>
     <script src="script/script.js"></script>
   </body>
 </html>

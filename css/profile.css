@@ -1,0 +1,111 @@
+.profile-page__list {
+    display: flex;
+    justify-content: space-around;
+    background: #e7e2e3;
+    border-radius: 16px 16px 0 0;
+    padding: 15px 0 10px 0;
+    margin-bottom: 7px;
+}
+
+.profile-page__list-item {
+    width: 23%;
+    text-align: center;
+}
+
+.profile-page__list-item img {
+    width: 30%;
+}
+
+.profile-page__list-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37px;
+    color: #2f2f2f;
+}
+
+.profile-page__myorders-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.myorders-title__name {
+    color: #2f2f2f;
+    font-size: 18px;
+}
+
+.myorders-title__etc {
+    display: flex;
+    align-items: center;
+}
+
+.myorders-title__etc-text {
+    margin-right: 5px;
+    color: #9f9f9f;
+}
+
+.myorders-title__etc img {
+    padding-top: 3px;
+    height: 12px;
+}
+
+@media screen and (max-width: 316px) {
+    .myorders-title__etc img {
+        padding-top: 1px;
+        height: 9px;
+    }
+}
+
+.profile-page__myorders-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 14px;
+}
+
+.myorders-content__item {
+    width: 23%;
+}
+
+.myorders-content__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.myorders-content__item img {
+    width: 40%;
+}
+
+.myorders-content__text {
+    text-align: center;
+    color: #2f2f2f;
+}
+
+
+
+.profile-page__services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-page__services-item {
+    width: 23%;
+    text-align: center;
+}
+
+.profile-page__services-item img {
+    width: 40%;
+}
+
+.profile-page__services-text {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2f2f2f;
+}
+
+.profile-page__foryou-title {
+    margin-top: 15px !important;
+}

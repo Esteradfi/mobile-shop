@@ -1,5 +1,6 @@
-// Слайдер в detail
-const swiperDetail = new Swiper('.detail-page__slider', {
+document.addEventListener("DOMContentLoaded", function() {
+  // Слайдер в detail
+  const swiperDetail = new Swiper('.detail-page__slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -10,48 +11,41 @@ const swiperDetail = new Swiper('.detail-page__slider', {
     },
   });
   
-  // Слайдер в попапе
-  $('body').on('click', '.new', function() {
-    let detailId = $(this).find('div.swiper-slide-active').attr('data-num');
+  const swiperDetailWindow = new Swiper('.detail-page__slider-window', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
   
-    $('.detail-page__dots.detail-page__slide-dots').css('display','none');
-    setTimeout(function() {
-      $('.detail-page__dots.detail-page__slide-dots').css('display','block');
-    }, 500);
-
-    const swiperDetailWindow = new Swiper('.detail-page__slider-window', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: false,
-      initialSlide: detailId,
-    
-      pagination: {
-        el: '.detail-page__dots.detail-page__slide-dots',
-        type: 'fraction',
-      },
-    })
+    pagination: {
+      el: '.detail-page__dots.detail-page__slide-dots',
+      type: 'fraction',
+    },
   });
   
+  // Слайдер в попапе
+  $('body').on('click', '.new', function() {
+    $('.detail-page__dots.detail-page__slide-dots').css('display','block');
+  });
+  
+  swiperDetailWindow.controller.control = swiperDetail;
+  swiperDetail.controller.control = swiperDetailWindow;
+  
   // Слайдер дополнительных фото
+  
+  const swiperDetailAdd = new Swiper('.detail-page__add-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    pagination: {
+      el: '.detail-page__dots-add',
+      type: 'fraction',
+    },
+  });
+  
   $('body').on('click', 'div.more', function() {
-    let moreId = $(this).attr('data-num');
-    $('.detail-page__dots-add').css('display','none');
-    setTimeout(function() {
-      $('.detail-page__dots-add').css('display','block');
-    }, 500);
-  
-      const swiperDetailAdd = new Swiper('.detail-page__add-slider', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        initialSlide: moreId,
-        pagination: {
-          el: '.detail-page__dots-add',
-          type: 'fraction',
-        },
-        nested: true,
-      });
-  
+    let moreId = $(this).attr('data-num');  
+    swiperDetailAdd.slideTo(moreId);
+    $('.detail-page__dots-add').css('display','block');  
   });
   
   //Слайдер цветов в окне "В корзину"
@@ -64,27 +58,29 @@ const swiperDetail = new Swiper('.detail-page__slider', {
       el: '.detail-page__dots-color',
       type: 'fraction',
     },
-    nested: true,
   });
+  
+  $('body').on('click', '.add-basket__color-zoom', function(){
+    let num = $(this).parent().attr('data-id');
+    swiperDetailColor.slideTo(num);
+    $('.detail-page__dots-recall').css('display','block');
+  });
+  
 
-  //Слайдер в отзывах
-  $('body').on('click', 'div.recall-page__img', function(){
+//Слайдер в отзывах
+const swiperRecall = new Swiper('.swiper-new', {    
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  pagination: {
+    el: '.detail-page__dots-recall',
+    type: 'fraction',
+  },
+});
+
+$('body').on('click', 'div.recall-page__img', function(){
     let num = $(this).attr('data-id');
-      $('.detail-page__dots-recall').css('display','none');
-      setTimeout(function() {
-        $('.detail-page__dots-recall').css('display','block');
-      }, 500);
-    
-    const swiperRecall = new Swiper('.swiper-new', {
-    
-      // Optional parameters
-      direction: 'horizontal',
-      loop: false,
-      initialSlide: num,
-      pagination: {
-        el: '.detail-page__dots-recall',
-        type: 'fraction',
-      },
-      nested: true,
-    });
-    });
+    swiperRecall.slideTo(num);
+    $('.detail-page__dots-recall').css('display','block');
+  });
+});

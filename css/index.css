@@ -1,11 +1,11 @@
 #button-to-top {   
     display: none;   
     background-color: #fff;   
-    width: 43px;   
-    height: 43px;   
+    width: 38px;   
+    height: 38px;   
     text-align: center;   
     border-radius: 50%;   
-    margin: 60px 18px;   
+    margin: 48px 18px;   
     position: fixed;   
     bottom: 30px;   
     right: 0;   
@@ -26,11 +26,127 @@
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
-    font-size: 2.5em;
-    line-height: 40px;
-    color: gray; 
- } 
+    font-size: 1.8em;
+    line-height: 34px;
+    color: #8c8c8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ /*Шапка в detail*/
+ .body-detail .page-header__wrapper {
+    z-index: 36;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 414px;
+    background-color: #f2f2f2;
+    transition: all 1s;
+}
 
+.body-detail .page-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 3px 0 2px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+    z-index: 36;
+    align-items: center;
+    background-color: transparent;
+}
+
+.body-detail .page-header .page-header__button{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.body-detail .page-header .page-header__button svg{
+    fill: rgb(255, 255, 255);
+}
+
+.body-detail .page-header .page-header__button:nth-child(3) svg{
+    fill: transparent;
+}
+
+.body-detail .page-header .page-header__button:nth-child(3) svg path{
+    stroke: rgb(255, 255, 255);
+}
+
+.body-detail .page-header__form {
+    position: relative;
+    width: 85%;
+}
+
+.body-detail .page-header__form-button {
+    position: absolute;
+    left: 15px;
+    top: 24%;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url(../img/search-index.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body-detail .page-header__form-input {
+    padding: 10px 10px 10px 45px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    background-color: #e7e7e7;
+    width: 100%;
+}
+
+@media screen and (max-width: 335px) {
+    .body-detail .page-header__form-button {
+        width: 18px;
+        height: 18px;
+        top: 22%;
+    }
+    .body-detail .page-header__form-input {
+        font-size: 14px;
+    }
+}
+
+.body-detail .page-header__form-input::-webkit-input-placeholder {
+    color: #b1b1b1;
+   } 
+   .body-detail .page-header__form-input::-moz-placeholder {
+    color: #b1b1b1;
+}
+.body-detail .page-header__form-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.body-detail .page-header__form-input:focus {
+    outline: auto #CC7240;
+}
+
+.body-detail .page-header__button:last-child {
+    margin-right: 5px;
+    margin-left: 12px;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.body-detail .page-header__button img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 335px) {
+    .body-detail .page-header__button img {
+        width: 25px;
+        height: 36px;
+    }
+}
 
 /*Шапка*/
 
@@ -41,16 +157,17 @@
     background-color: #f2f2f2;
 }
 
+
 .page-header {
     background-color: #f2f2f2;
     position: relative;
-    padding: 0 3px 0 2px;
-    padding-top: 15px;
+    padding: 15px 3px 0 2px;
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 5px;
+    align-items: center;
     z-index: 36;
 }
+
 
 .page-header__form {
     position: relative;
@@ -111,7 +228,6 @@
 
 .page-header__button img {
     width: 30px;
-    height: 41px;
 }
 
 @media screen and (max-width: 335px) {
@@ -125,7 +241,7 @@
 
 .index-page__nav {
     z-index: 36;
-    padding: 1px 11px 14px 8px;
+    padding: 10px 11px 14px 8px;
     background-color: #f2f2f2;
     margin-bottom: 0;
 }
@@ -228,7 +344,7 @@
     width: 70%;
     margin-bottom: 5px;
     padding: 0 10px;
-    aspect-ratio: 1;
+    aspect-ratio: 20/17;
 }
 
 /*Товары*/
