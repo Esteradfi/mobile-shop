@@ -466,6 +466,65 @@ $(document).ready(function () {
       isFavorites = true;
     }
   });
+
+  //Окно изменения данных в профиле
+  $("#mydata").click(function (event) {
+    event.preventDefault();
+    $("body").css("overflow", "hidden");
+      $("#mydata-window")
+          .css("display", "block")
+          .animate({ opacity: 1 }, 198);
+  });
+
+  $("#mydata-close, #mydata-user-exit").click(function () {
+      $("#mydata-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
+          $(this).css("display", "none");
+      });
+  });
+
+  //Вход и выход в профиле
+  let userIsAuth = true;
+
+  if(userIsAuth) {
+    $(".profile-header__settings-item, .profile-page__list-item, .myorders-content__item, .profile-page__services-item").css("pointer-events", "auto");
+  } else {
+    $(".profile-header__settings-item, .profile-page__list-item, .myorders-content__item, .profile-page__services-item").css("pointer-events", "none");
+  }
+
+  $("#mydata-user-exit").click(function () {
+    userIsAuth = false;
+    $(".profile-header__settings-item, .profile-page__list-item, .myorders-content__item, .profile-page__services-item").css("pointer-events", "none");
+    $(".profile-header__settings-item, .profile-page__list-item, .myorders-content__item, .profile-page__services-item").addClass("user-not-auth");
+    $("#user-name").css("display", "none");
+    $("#to-user-auth").css("display", "block");
+  });
+
+  $("#auth-button").click(function () {
+    userIsAuth = true;
+    $(".profile-header__settings-item, .profile-page__list-item, .myorders-content__item, .profile-page__services-item").css("pointer-events", "auto");
+    $(".profile-header__settings-item, .profile-page__list-item, .myorders-content__item, .profile-page__services-item").removeClass("user-not-auth");
+    $("#user-name").css("display", "block");
+    $("#to-user-auth").css("display", "none");
+  });
+
+  $("#to-user-auth, .user-not-auth, .profile-page__list-item").click(function (event) {
+    event.preventDefault();
+    $("body").css("overflow", "hidden");
+      $("#auth-window")
+          .css("display", "block")
+          .animate({ opacity: 1 }, 198);
+    });
+
+
+  $("#auth-close, #auth-button").click(function () {
+    $("#auth-window").animate({ opacity: 0 }, 198, function () {
+      $("body").css("overflow", "auto");
+        $(this).css("display", "none");
+    });
+  });
+    
+
 });
 
 //Промотка страницы вверх

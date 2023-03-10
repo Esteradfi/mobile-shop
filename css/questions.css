@@ -88,6 +88,7 @@
 
 .answer-row__name {
     color: #CC7240;
+    padding-left: 2px;
 }
 
 .question-row__text {
@@ -96,7 +97,7 @@
 
 .answer-row__text {
     color:#8c8c8c;
-    margin-left: 11px;
+    margin-left: 10px;
 }
 
 .question-row__text {

@@ -19,6 +19,78 @@
     />
 </head>
 <body>
+    <div id="auth-window" class="page-auth__wrapper">
+        <header class="page-header container section__container page-header-light categories-page__header">
+            <button id="auth-close" class="page-header__button">
+                <img src="./img/close-button.svg" alt="etc">
+            </button>
+        </header>
+        <section class="page-auth container section__container">
+            <div class="page-auth__title text-font-24">
+                Вход
+            </div>
+            <div class="page-auth__subtitle text-font-18">
+                <a href="#" class="page-auth__subtitle-forgot">Забыли пароль?</a>
+                <a href="#" class="page-auth__subtitle-reset">Сброс</a>
+            </div>
+            <form action="" class="page-auth__form">
+                <div class="page-auth__form-inputs">
+                    <input type="tel" id="user-phone" placeholder="Введите номер телефона">
+                    <input maxlength="4" type="user-password" id="user-pass" placeholder="Введите пароль">
+                    <small>По умолчанию пароль 0000</small>
+                </div>
+                <button id="auth-button" type="submit" class="page-auth__form-button">
+                    Войти
+                </button>
+            </form>
+        </section>
+    </div>
+    <div id="mydata-window" class="page-mydata__wrapper">
+        <header class="page-header page-header-light categories-page__header">
+            <button id="mydata-close" class="page-header__button">
+                <img src="./img/back-index.svg" alt="etc">
+            </button>
+            <h3 class="page-header__title page-mydata__header-title">Мои данные</h3>
+            <div></div>
+        </header>
+        <section class="page-mydata container section__container">
+            <div class="page-mydata__title text-font-18">
+                <span>Номер телефона </span>
+                <strong>+7 (707) 648-00-01</strong>
+            </div>
+            <form action="" class="page-mydata__form">
+                <div class="page-mydata__form-inputs">
+                    <input type="password" maxlength="4" id="old-pass" placeholder="Введите старый пароль">
+                    <input type="password" maxlength="4" id="new-pass" placeholder="Введите новый пароль">
+                </div>
+                <div class="page-mydata__form-buttons">
+                    <button type="submit">Подтвердить</button>
+                    <a id="mydata-user-exit" href="#">Выйти из аккаунта</a>
+                </div>    
+            </form>
+        </section>
+    </div> 
+    <header class="profile-page__header">
+        <div class="profile-page__header-info">
+            <img class="profile-header__info-image" src="./img/user-default.svg" alt="user ava" />
+            <div id="user-name" class="profile-header__info-user text-font-16">
+                tb7368804400
+            </div>
+            <div id="to-user-auth" class="profile-header__info-user text-font-16">
+                Войдите в профиль
+            </div>
+        </div>
+        <div class="profile-page__header-settings text-font-14">
+            <a href="#" class="profile-header__settings-item">
+                <img src="./img/contactwithus.svg" alt="contact with us">
+                <div>Связаться с нами</div>
+            </a>
+            <button id="mydata" class="profile-header__settings-item">
+                <img src="./img/settings.svg" alt="my data">
+                <div>Мои<br> данные</div>
+            </button>
+        </div>
+    </header>
     <section class="profile-page__list text-font-16">
         <a href="#" class="profile-page__list-item">
             <img src="./img/like-empty.svg" alt="liked">
@@ -71,12 +143,6 @@
                 </div>
             </a>
             <a href="#" class="myorders-content__item">
-                <img src="./img/recall-empty.svg" alt="write recall">
-                <div class="myorders-content__text">
-                    Написать отзыв
-                </div>
-            </a>
-            <a href="#" class="myorders-content__item">
                 <img src="./img/exchange-empty.svg" alt="exchange">
                 <div class="myorders-content__text">
                     Возврат/Обмен
@@ -85,7 +151,7 @@
         </div>
     </section>
     <section class="profile-page__services text-font-16 section__container container">
-        <a href="/info-payment.html" class="profile-page__services-item">
+        <a href="/payment.html" class="profile-page__services-item">
             <img src="./img/payment.svg" alt="payment">
             <div class="profile-page__services-text">
                 Оплата
@@ -324,5 +390,8 @@
     <script src="script/jquery-3.6.0.min.js"></script>
     <!-- скрипты -->
     <script src="script/script.js"></script>
+    <!-- маска для номера телефона-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="./script/phonemask.js"></script>
 </body>
 </html>

@@ -1,3 +1,41 @@
+.profile-page__header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 18px;
+    height: 80px;
+}
+
+.profile-page__header-info {
+    display: flex;
+    align-items: center;
+    width: 150%;
+}
+
+.profile-header__info-image {
+    width: 20%;
+}
+
+.profile-header__info-user {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.profile-page__header-settings {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    align-items: center;
+}
+
+.profile-header__settings-item {
+    width: 50%;
+}
+
+.profile-header__settings-item img {
+    width: 25%;
+}
+
 .profile-page__list {
     display: flex;
     justify-content: space-around;
@@ -62,7 +100,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .myorders-content__item {
@@ -108,4 +146,191 @@
 
 .profile-page__foryou-title {
     margin-top: 15px !important;
+}
+
+
+/*mydata*/
+
+.page-mydata__wrapper, .page-auth__wrapper {
+    padding: 0 15px;
+    display: none;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    transition: ease 0.6s;
+    height: 100%;
+    top: 0;
+    left: 0; bottom: 0;
+    margin: auto;
+    display: none;
+    opacity: 0;
+    z-index: 50;
+    text-align: center;
+}
+
+.page-mydata__header-title {
+    margin-right: 30px;
+}
+
+.page-mydata {
+    text-align: center;
+}
+
+.page-mydata__title {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #2f2f2f;
+}
+
+.page-mydata__title span {
+    color: #9f9f9f;
+    font-weight: 400;
+}
+
+.page-mydata__title strong {
+    white-space: nowrap;
+}
+
+.page-mydata__form-inputs {
+    margin-bottom: 80px;
+}
+
+.page-mydata__form-inputs input {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.page-mydata__form-inputs input:not(:last-child) {
+    margin-bottom: 40px;
+    color: #2f2f2f;
+    font-size: 18px;
+}
+
+.page-mydata__form-inputs input::-webkit-input-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+.page-mydata__form-inputs input::-moz-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 300px) {
+    .page-mydata__form-inputs input::-moz-placeholder {
+        font-size: 16px;
+    }
+    
+    .page-mydata__form-inputs input::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+}
+
+.page-mydata__form-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-mydata__form-buttons button {
+    width: 100%;
+    background: linear-gradient(to right, #fe8e04, #ef5b15);
+    padding: 12px 0;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+#mydata-user-exit {
+    width: 100%;
+    background: transparent;
+    padding: 12px 0;
+    color: #CC7240;
+    border: 1px solid #CC7240;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+#to-user-auth {
+    display: none;
+}
+
+#auth-close {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+#auth-close img {
+    width: 20px;
+    height: 20px;
+}
+
+.page-auth {
+    text-align: left;
+}
+
+.page-auth__title {
+    font-size: 32px;
+    color: #2f2f2f;
+    margin-bottom: 5px;
+}
+
+.page-auth__subtitle {
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.page-auth__subtitle-forgot {
+    color: #9f9f9f;
+}
+
+.page-auth__subtitle-reset {
+    color: #CC7240;
+}
+
+.page-auth__form-inputs {
+    margin-bottom: 40px;
+}
+
+.page-auth__form-inputs input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 10px;
+    color: #2f2f2f;
+    font-size: 24px;
+}
+
+.page-auth__form-inputs input:first-child {
+    margin-bottom: 30px;
+}
+
+.page-auth__form-inputs small {
+    color: #9f9f9f; 
+}
+
+.page-auth__form-inputs input::-webkit-input-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+.page-auth__form-inputs input::-moz-placeholder {
+    color: #afafaf;
+    font-size: 18px;
+}
+
+.page-auth__form-button {
+    width: 100%;
+    background: linear-gradient(to right, #fe8e04, #ef5b15);
+    padding: 12px 0;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.page-auth__form-button:disabled {
+    opacity: 0.5;
 }
