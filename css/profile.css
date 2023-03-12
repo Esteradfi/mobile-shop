@@ -30,10 +30,15 @@
 
 .profile-header__settings-item {
     width: 50%;
+    background: transparent;
 }
 
 .profile-header__settings-item img {
     width: 25%;
+}
+
+.profile-header__settings-item div {
+    color: #2f2f2f;
 }
 
 .profile-page__list {

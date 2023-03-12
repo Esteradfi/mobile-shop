@@ -524,6 +524,87 @@ $(document).ready(function () {
     });
   });
     
+  //Загрузка фото
+  $('#my-file-label').on('click', function() {
+    $('#my-file').trigger('click');
+  });
+
+  let maxFileSize = 2 * 1024 * 1024; // (байт) Максимальный размер файла (2мб)
+  let queue = {};
+
+  let imagesList = $('#uploadImagesList');
+  // 'detach' подобно 'clone + remove'
+  let itemPreviewTemplate = imagesList.find('.send-page__images-item').detach();
+
+  // Вычисление лимита
+  function limitUpload() {
+    return 5 - imagesList.children().length;
+  }
+  // Отображение лимита
+  function limitDisplay() {
+    let sTxt;
+    switch (limitUpload()) {
+      case 5:
+        sTxt = '(0/5)';
+        break;
+      case 0:
+        sTxt = '(5/5)';
+        $('#my-file-label, #my-file').css("display", "none");
+        $('#uploadImagesList').css("max-width", "100%");
+        break;
+      default:
+        sTxt = '(' + (5 - +limitUpload()) + '/5)';
+        $('#my-file-label, #my-file').css("display", "block");
+        $('#uploadImagesList').css("max-width", "80%");
+    }
+    if (limitUpload() == 0) {
+      $('#my-file-label, #my-file').css(("display", "none"));
+    } else {
+      $('#my-file-label, #my-file').css(("display", "block"));
+    }
+    $('.add_photo-item').html(sTxt);
+  }
+
+  $('#my-file').on('change', function() {
+    let files = this.files;
+    // Перебор файлов до лимита
+    for (var i = 0; i < limitUpload(); i++) {
+
+      let file = files[i];
+      if (!file.type.match(/image\/(jpeg|jpg|png|gif)/)) {
+        continue;
+      }
+      if (file.size > maxFileSize) {
+        alert('Размер фотографии не должен превышать 2 Мб');
+        continue;
+      }
+      preview(files[i]);
+    }
+    this.value = '';
+  });
+  function preview(file) {
+    let reader = new FileReader();
+    reader.addEventListener('load', function(event) {
+      let img = document.createElement('img');
+      let itemPreview = itemPreviewTemplate.clone();
+      itemPreview.find('.img-wrap img').attr('src', event.target.result);
+      itemPreview.data('id', file.name);
+      imagesList.append(itemPreview);
+      // Обработчик удаления
+      itemPreview.on('click', function() {
+        delete queue[file.name];
+        $(this).remove();
+        limitDisplay();
+      });
+
+      queue[file.name] = file;
+      // Отображение лимита при добавлении
+      limitDisplay();
+    });
+    reader.readAsDataURL(file);
+  }
+  // Отображение лимита при запуске
+  limitDisplay();
 
 });
 

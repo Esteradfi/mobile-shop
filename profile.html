@@ -35,11 +35,11 @@
             </div>
             <form action="" class="page-auth__form">
                 <div class="page-auth__form-inputs">
-                    <input type="tel" id="user-phone" placeholder="Введите номер телефона">
-                    <input maxlength="4" type="user-password" id="user-pass" placeholder="Введите пароль">
+                    <input class="page-auth__input-required" type="tel" id="user-phone" required placeholder="Введите номер телефона">
+                    <input class="page-auth__input-required" maxlength="4" type="password" id="user-pass" required placeholder="Введите пароль">
                     <small>По умолчанию пароль 0000</small>
                 </div>
-                <button id="auth-button" type="submit" class="page-auth__form-button">
+                <button  id="auth-button" type="submit" class="page-auth__form-button">
                     Войти
                 </button>
             </form>
@@ -136,13 +136,13 @@
                     Передано в доставку
                 </div>
             </a>
-            <a href="#" class="myorders-content__item">
+            <a href="./send-recall.html" class="myorders-content__item">
                 <img src="./img/get-delivery-empty.svg" alt="get order">
                 <div class="myorders-content__text">
                     Заказ получен
                 </div>
             </a>
-            <a href="#" class="myorders-content__item">
+            <a href="./send-return.html" class="myorders-content__item">
                 <img src="./img/exchange-empty.svg" alt="exchange">
                 <div class="myorders-content__text">
                     Возврат/Обмен
@@ -390,8 +390,10 @@
     <script src="script/jquery-3.6.0.min.js"></script>
     <!-- скрипты -->
     <script src="script/script.js"></script>
-    <!-- маска для номера телефона-->
+    <!-- маска для номера телефона -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-    <script src="./script/phonemask.js"></script>
+    <script src="./script/masks.js"></script>
+    <!-- активация/деактивация кнопки авторизации-->
+    <script src="./script/auth-require.js"></script>
 </body>
 </html>
