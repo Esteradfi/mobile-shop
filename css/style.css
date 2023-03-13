@@ -5,6 +5,7 @@
 @import url(./questions.css);
 @import url(./profile.css);
 @import url(./send.css);
+@import url(./delayed.css);
 
 *,
 *::before,

@@ -508,7 +508,7 @@ $(document).ready(function () {
     $("#to-user-auth").css("display", "none");
   });
 
-  $("#to-user-auth, .user-not-auth, .profile-page__list-item").click(function (event) {
+  $("#to-user-auth, .user-not-auth").click(function (event) {
     event.preventDefault();
     $("body").css("overflow", "hidden");
       $("#auth-window")
