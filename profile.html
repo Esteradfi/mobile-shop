@@ -19,6 +19,7 @@
     />
 </head>
 <body>
+    <div id="shadow"></div>
     <div id="auth-window" class="page-auth__wrapper">
         <header class="page-header container section__container page-header-light categories-page__header">
             <button id="auth-close" class="page-header__button">
@@ -69,7 +70,75 @@
                 </div>    
             </form>
         </section>
-    </div> 
+    </div>
+    <form action="" id="coupons-window">
+        <div class="page-coupons__wrapper">
+            <div class="page-coupons__content-wrapper">
+                <div class="page-coupons__header">
+                    <div class="page-coupons__header-title">Купоны</div>
+                    <img id="coupons-close" src="./img/close.svg" alt="">
+                </div>
+                <div class="page-coupons__content section__container">
+                    <div class="page-coupons__content-title">Действующие купоны</div>
+                    <div class="page-coupons__content-item">
+                        <div class="page-coupons__item-left">
+                            <div class="page-coupons__left-discount text-font-24">
+                                - 10%
+                            </div>
+                            <div class="page-coupons__left-description text-font-14">
+                                Скидка на общую сумму заказа от 11990 тенге (без учета почтовых расходов)
+                            </div>
+                            <div class="page-coupons__left-dates text-font-14">
+                                2023.02.01 00:00-2023.02.31 23:59
+                            </div>
+                        </div>
+                        <div class="page-coupons__item-right">
+                            <div class="page-coupons__right-border"></div>
+                            <div class="page-coupons__right-block">
+                                <input type="radio" name="coupon" class="page-coupon__input" id="discount-10">
+                                <label for="discount-10">
+                                    <span type="button" class="page-coupons__right-button text-font-14">
+                                        Выбрать
+                                    </span>
+                                </label>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="page-coupons__content-item">
+                        <div class="page-coupons__item-left">
+                            <div class="page-coupons__left-discount text-font-24">
+                                - 15%
+                            </div>
+                            <div class="page-coupons__left-description text-font-14">
+                                Скидка на общую сумму заказа от 15990 тенге (без учета почтовых расходов)
+                            </div>
+                            <div class="page-coupons__left-dates text-font-14">
+                                2023.02.01 00:00-2023.02.31 23:59
+                            </div>
+                        </div>
+                        <div class="page-coupons__item-right">
+                            <div class="page-coupons__right-border"></div>
+                            <div class="page-coupons__right-block">
+                                <input type="radio" name="coupon" class="page-coupon__input" id="discount-15">
+                                <label for="discount-15">
+                                    <span type="button" class="page-coupons__right-button text-font-14">
+                                        Выбрать
+                                    </span>
+                                </label>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-detail footer-open">
+                <div class="container footer__container footer-detail__container">
+                <button type="button" id="coupon-accept" class="footer-detail__btn basket">
+                    Применить
+                </button>
+                </div>
+            </div>
+        </div> 
+    </form> 
     <header class="profile-page__header">
         <div class="profile-page__header-info">
             <img class="profile-header__info-image" src="./img/user-default.svg" alt="user ava" />
@@ -98,12 +167,12 @@
                 Избранное
             </div>
         </a>
-        <a href="#" class="profile-page__list-item">
+        <button id="coupons" type="button" class="profile-page__list-item">
             <img src="./img/coupon.svg" alt="coupons">
             <div class="profile-page__list-text">
                 Купоны
             </div>
-        </a>
+        </button>
         <a href="./viewed.html" class="profile-page__list-item">
             <img src="./img/clock.svg" alt="watched">
             <div class="profile-page__list-text">

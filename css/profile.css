@@ -53,6 +53,7 @@
 .profile-page__list-item {
     width: 23%;
     text-align: center;
+    background: transparent;
 }
 
 .profile-page__list-item img {
@@ -338,4 +339,126 @@
 
 .page-auth__form-button:disabled {
     opacity: 0.5;
+}
+
+#coupons-window {
+    width: 100%;
+    min-height: 75vh;
+    height: 75%;
+    padding: 18px 0px;
+    border-radius: 4px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    transition: ease 0.6s;
+    opacity: 0;
+    z-index: 50;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.page-coupons__header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.page-coupons__header-title {
+    color: #2f2f2f;
+    font-size: 18px;
+}
+
+#coupons-close {
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    position: absolute;
+    font-size: 40px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+.page-coupons__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.page-coupons__content-wrapper {
+    flex: 1 0 auto;
+}
+
+.page-coupons__content {
+    text-align: left;
+}
+
+.page-coupons__content-title {
+    color: #9f9f9f;
+    margin-bottom: 15px;
+}
+
+.page-coupons__content-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.page-coupons__item-left, .page-coupons__item-right {
+    background: #fff0e9;
+    border-radius: 10px;
+}
+
+.page-coupons__item-left {
+    width: 70%;
+    padding: 10px;
+    color: #CC7240;
+}
+
+.page-coupons__left-discount {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.page-coupons__left-description, .page-coupons__left-dates {
+    font-size: 14px;
+}
+
+.page-coupons__item-right {
+    width: 30%;
+    display: flex;
+    padding: 10px 10px 10px 0;
+}
+
+.page-coupons__right-border {
+    border-left: dashed #9f9f9f 0.5px;
+    color: transparent;
+}
+
+.page-coupons__right-block {
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-coupon__input {
+    display: none;
+}
+
+.page-coupons__right-button {
+    color: #fff0e9;
+    background-color: #ef5b15;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px 15px; 
+}
+
+.page-coupons__right-block .page-coupon__input:checked + label .page-coupons__right-button {
+    color: #CC7240;
+    background: #fff0e9;
 }

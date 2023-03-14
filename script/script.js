@@ -483,6 +483,25 @@ $(document).ready(function () {
       });
   });
 
+  //Окно купонов в профиле
+  $("#coupons").click(function (event) {
+    event.preventDefault();
+    $("#shadow").fadeIn(297, function () {
+      $("body").css("overflow", "hidden");
+        $("#coupons-window")
+            .css("display", "block")
+            .animate({ opacity: 1 }, 198);
+    });
+  });
+
+  $("#coupons-close, #coupon-accept, #shadow").click(function () {
+      $("#coupons-window").animate({ opacity: 0 }, 198, function () {
+        $("body").css("overflow", "auto");
+          $(this).css("display", "none");
+          $("#shadow").fadeOut(297);
+      });
+  });
+
   //Вход и выход в профиле
   let userIsAuth = true;
 
@@ -529,7 +548,7 @@ $(document).ready(function () {
     $('#my-file').trigger('click');
   });
 
-  let maxFileSize = 2 * 1024 * 1024; // (байт) Максимальный размер файла (2мб)
+  let maxFileSize = 10 * 1024 * 1024; // (байт) Максимальный размер файла (10мб)
   let queue = {};
 
   let imagesList = $('#uploadImagesList');
@@ -575,7 +594,7 @@ $(document).ready(function () {
         continue;
       }
       if (file.size > maxFileSize) {
-        alert('Размер фотографии не должен превышать 2 Мб');
+        alert('Размер фотографии не должен превышать 10 Мб');
         continue;
       }
       preview(files[i]);
